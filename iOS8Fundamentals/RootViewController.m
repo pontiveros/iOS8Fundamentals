@@ -8,6 +8,7 @@
 
 #import "RootViewController.h"
 #import "IBeaconViewController.h"
+#import "UIWebViewController.h"
 
 @interface RootViewController ()
 
@@ -20,7 +21,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-//    self.title = @"iOS8Fundamentals";
+    self.title = @"iOS8Fundamentals";
     items = [[NSMutableDictionary alloc] init];
     [self fillRootTable];
 }
@@ -65,9 +66,18 @@
     NSLog(@"Hello Pedro Ontiveros.");
     
     IBeaconViewController *vc = [[IBeaconViewController alloc] initWithNibName:@"IBeaconView" bundle:nil];
-    [self presentViewController:vc animated:YES completion:nil];
+//    [self presentViewController:vc animated:YES completion:nil];
 //    [self.navigationController presentViewController:vc animated:YES completion:nil];
-//    [self.navigationController pushViewController:vc animated:YES];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+
+- (void)openWebViewVC
+{
+    UIWebViewController * vc = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"UIWebViewVC"];
+    [self.navigationController pushViewController:vc animated:YES];
+    
+//    YourViewControllerClass *viewController = [[UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil] instantiateViewControllerWithIdentifier:@"ViewController"];
 }
 
 #pragma mark - UITableViewDelegate
