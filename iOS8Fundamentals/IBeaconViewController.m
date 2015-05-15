@@ -23,7 +23,7 @@
     
     NSUUID *uuid0 = [[NSUUID alloc] initWithUUIDString:@"72D678E1-C1C4-4161-92F1-60A05347AF93"];
     NSUUID *uuid1 = [[NSUUID alloc] initWithUUIDString:@"92DDA21C-128E-4222-A6EE-EED829DA039D"];
-    NSUUID *uuid2 = [[NSUUID alloc] initWithUUIDString:@"E2C56DB5-DFFB--B060-D0F5A71096E0"];
+    NSUUID *uuid2 = [[NSUUID alloc] initWithUUIDString:@"E2C56DB5-DFFB-48D2-B060-D0F5A71096E0"];
     
     CLBeaconRegion *region0 = [[CLBeaconRegion alloc] initWithProximityUUID:uuid0 major:5 minor:1000 identifier:@"UbiClip0"];
     CLBeaconRegion *region1 = [[CLBeaconRegion alloc] initWithProximityUUID:uuid1 major:5 minor:1000 identifier:@"UbiClip1"];
