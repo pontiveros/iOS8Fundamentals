@@ -18,6 +18,7 @@
 		1C5653B81B03C99900BBE07D /* IBeaconView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C5653B71B03C99900BBE07D /* IBeaconView.xib */; };
 		1C5653BB1B03C9D600BBE07D /* IBeaconViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C5653BA1B03C9D600BBE07D /* IBeaconViewController.m */; };
 		1C5653BD1B03CCD400BBE07D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C5653BC1B03CCD400BBE07D /* CoreLocation.framework */; };
+		1C5653C01B04B6EB00BBE07D /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C5653BF1B04B6EB00BBE07D /* CoreBluetooth.framework */; };
 		1CC9CCA21B041EF6001EB21A /* UIWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CC9CCA11B041EF6001EB21A /* UIWebViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +51,7 @@
 		1C5653B91B03C9D600BBE07D /* IBeaconViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBeaconViewController.h; sourceTree = "<group>"; };
 		1C5653BA1B03C9D600BBE07D /* IBeaconViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBeaconViewController.m; sourceTree = "<group>"; };
 		1C5653BC1B03CCD400BBE07D /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		1C5653BF1B04B6EB00BBE07D /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		1CC9CCA01B041EF6001EB21A /* UIWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIWebViewController.h; sourceTree = "<group>"; };
 		1CC9CCA11B041EF6001EB21A /* UIWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIWebViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -59,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C5653C01B04B6EB00BBE07D /* CoreBluetooth.framework in Frameworks */,
 				1C5653BD1B03CCD400BBE07D /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -142,6 +145,7 @@
 		1C5653BE1B03CCDB00BBE07D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1C5653BF1B04B6EB00BBE07D /* CoreBluetooth.framework */,
 				1C5653BC1B03CCD400BBE07D /* CoreLocation.framework */,
 			);
 			name = Frameworks;

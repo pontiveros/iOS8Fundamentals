@@ -12,6 +12,7 @@
 @interface IBeaconViewController : UIViewController <CLLocationManagerDelegate>
 
 
+@property (nonatomic, strong) IBOutlet UILabel *label;
 @property (nonatomic, strong) CLLocationManager *locationManager;
 
 @end

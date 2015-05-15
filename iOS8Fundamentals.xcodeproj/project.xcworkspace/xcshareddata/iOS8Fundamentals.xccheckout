@@ -5,23 +5,23 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>CDA119FD-36CD-4F2E-806F-07092F9275CB</string>
+	<string>527EE9F9-AFD5-42F8-BCAC-5B81EA05D99E</string>
 	<key>IDESourceControlProjectName</key>
-	<string>iOS8Fundamentals</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>5B7BC8375E1A2F92890FAB9EC3FA88CD98A8421A</key>
-		<string>https://github.com/pontiveros/iOS8Fundamentals.git</string>
+		<string>https://github.com/pontiveros/iOS8Fundamentals</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>iOS8Fundamentals.xcodeproj</string>
+	<string>iOS8Fundamentals.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>5B7BC8375E1A2F92890FAB9EC3FA88CD98A8421A</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/pontiveros/iOS8Fundamentals.git</string>
+	<string>https://github.com/pontiveros/iOS8Fundamentals</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>

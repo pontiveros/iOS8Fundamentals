@@ -53,7 +53,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="29U-iY-VJp">
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="29U-iY-VJp">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
@@ -61,7 +61,13 @@
                                 </connections>
                             </webView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="29U-iY-VJp" firstAttribute="top" secondItem="k42-50-usB" secondAttribute="top" id="4rx-wO-oQU"/>
+                            <constraint firstAttribute="trailing" secondItem="29U-iY-VJp" secondAttribute="trailing" id="asM-jP-ENe"/>
+                            <constraint firstItem="29U-iY-VJp" firstAttribute="leading" secondItem="k42-50-usB" secondAttribute="leading" id="c44-Nb-UBP"/>
+                            <constraint firstItem="29U-iY-VJp" firstAttribute="bottom" secondItem="cHX-hU-oZC" secondAttribute="top" id="u1d-5P-i4Y"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="view" destination="k42-50-usB" id="uwP-gl-XjL"/>
@@ -70,7 +76,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N0q-rC-CRx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1016" y="1013"/>
+            <point key="canvasLocation" x="1016" y="1036"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="0F4-3X-qb2">
