@@ -7,13 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <CoreLocation/CoreLocation.h>
 
-@interface IBeaconViewController : UIViewController <CLLocationManagerDelegate>
 
+@interface IBeaconViewController : UIViewController
 
 @property (nonatomic, strong) IBOutlet UILabel *label;
-@property (nonatomic, strong) CLLocationManager *locationManager;
 
 @end
 

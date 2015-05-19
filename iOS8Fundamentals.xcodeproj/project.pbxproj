@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C0B965F1B0677A300E43B62 /* RegionMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C0B965E1B0677A300E43B62 /* RegionMonitor.m */; };
 		1C153F8C1B039D5200187EB7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C153F8B1B039D5200187EB7 /* main.m */; };
 		1C153F8F1B039D5200187EB7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C153F8E1B039D5200187EB7 /* AppDelegate.m */; };
 		1C153F921B039D5200187EB7 /* iOS8Fundamentals.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1C153F901B039D5200187EB7 /* iOS8Fundamentals.xcdatamodeld */; };
@@ -33,6 +34,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1C0B965D1B0677A300E43B62 /* RegionMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegionMonitor.h; sourceTree = "<group>"; };
+		1C0B965E1B0677A300E43B62 /* RegionMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegionMonitor.m; sourceTree = "<group>"; };
 		1C153F861B039D5200187EB7 /* iOS8Fundamentals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS8Fundamentals.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C153F8A1B039D5200187EB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1C153F8B1B039D5200187EB7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -108,6 +111,8 @@
 				1C5653B71B03C99900BBE07D /* IBeaconView.xib */,
 				1C5653B91B03C9D600BBE07D /* IBeaconViewController.h */,
 				1C5653BA1B03C9D600BBE07D /* IBeaconViewController.m */,
+				1C0B965D1B0677A300E43B62 /* RegionMonitor.h */,
+				1C0B965E1B0677A300E43B62 /* RegionMonitor.m */,
 				1C153F991B039D5200187EB7 /* Images.xcassets */,
 				1C153F9B1B039D5200187EB7 /* LaunchScreen.xib */,
 				1C153F901B039D5200187EB7 /* iOS8Fundamentals.xcdatamodeld */,
@@ -201,6 +206,11 @@
 					1C153F851B039D5200187EB7 = {
 						CreatedOnToolsVersion = 6.3.1;
 						DevelopmentTeam = DXK2N8YN8R;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					1C153FA11B039D5200187EB7 = {
 						CreatedOnToolsVersion = 6.3.1;
@@ -258,6 +268,7 @@
 				1C5653BB1B03C9D600BBE07D /* IBeaconViewController.m in Sources */,
 				1CC9CCA21B041EF6001EB21A /* UIWebViewController.m in Sources */,
 				1C153F951B039D5200187EB7 /* RootViewController.m in Sources */,
+				1C0B965F1B0677A300E43B62 /* RegionMonitor.m in Sources */,
 				1C153F8C1B039D5200187EB7 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
