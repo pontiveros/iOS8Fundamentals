@@ -9,11 +9,11 @@
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
 
-@interface iOS8FundamentalsTests : XCTestCase
+@interface iOSWorkshopTests : XCTestCase
 
 @end
 
-@implementation iOS8FundamentalsTests
+@implementation iOSWorkshopTests
 
 - (void)setUp {
     [super setUp];

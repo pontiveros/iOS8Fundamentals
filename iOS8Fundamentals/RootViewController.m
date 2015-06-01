@@ -9,13 +9,14 @@
 #import "RootViewController.h"
 #import "IBeaconViewController.h"
 #import "UIWebViewController.h"
+#import "MultiThreadVC.h"
 
 @interface RootViewController ()
 
 @end
 
-@implementation RootViewController
 
+@implementation RootViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -46,7 +47,7 @@
     NSMutableDictionary *advanced = [[NSMutableDictionary alloc] init];
     [advanced setObject:@"openGesturesVC" forKey:@"Gestures"];
     [advanced setObject:@"openLocationModule" forKey:@"Location"];
-    [advanced setObject:@"openMultithreadVC" forKey:@"Multithreading"];
+    [advanced setObject:@"openMultithreadVC" forKey:@"Threaded Programming"];
     [advanced setObject:@"openGravityCollisionVC" forKey:@"Gravity And Collission"];
     [advanced setObject:@"openQuartzModule" forKey:@"Quartz"];
     [advanced setObject:@"openBeaconVC" forKey:@"iBeacon"];
@@ -80,6 +81,12 @@
 //    YourViewControllerClass *viewController = [[UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil] instantiateViewControllerWithIdentifier:@"ViewController"];
 }
 
+- (void)openMultithreadVC
+{
+    MultiThreadVC *vc = [[MultiThreadVC alloc] initWithNibName:@"MultiThreadView" bundle:nil];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
 #pragma mark - UITableViewDelegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -89,13 +96,21 @@
         NSString *strSelector = [dict objectForKey:[[dict allKeys] objectAtIndex:indexPath.row]];
         
         SEL         signatureSel = NSSelectorFromString(strSelector);
-        NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:[self methodSignatureForSelector:signatureSel]];
         
-        [invocation setTarget:self];
-        [invocation setSelector:signatureSel];
-        [invocation invoke];
-        
-        [tableView deselectRowAtIndexPath:indexPath animated:NO];
+        if ([self respondsToSelector:signatureSel]) {
+            NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:[self methodSignatureForSelector:signatureSel]];
+            
+            [invocation setTarget:self];
+            [invocation setSelector:signatureSel];
+            [invocation invoke];
+            
+            [tableView deselectRowAtIndexPath:indexPath animated:NO];
+        } else {
+            UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"WARNING" message:@"This functionality is not implemented!" preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertAction    *action = [UIAlertAction actionWithTitle:@"Accept" style:UIAlertActionStyleDefault handler:nil];
+            [alert addAction:action];
+            [self presentViewController:alert animated:YES completion:nil];
+        }
         
     } @catch (NSException *err) {
         NSLog(@"An error has occurred :%@", [err description]);
@@ -107,14 +122,22 @@
 #pragma mark - UITableViewDataSource
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell * cell = [[UITableViewCell alloc] init];
+    static NSString *identifier = @"RootViewCellView";
+    UITableViewCell   *cellView = [tableView dequeueReusableCellWithIdentifier:identifier];
+    
+    if (!cellView) {
+        cellView = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+    }
+    
     NSString     *key  = [[items allKeys] objectAtIndex:indexPath.section];
     NSDictionary *dict = [items objectForKey:key];
     NSString    *label = [[dict allKeys] objectAtIndex:indexPath.row];
     
-    [cell.textLabel setText:label];
-    return cell;
+    [cellView.textLabel setText:label];
+    
+    return cellView;
 }
+
 - (NSString*)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
     NSString *title = [[items allKeys] objectAtIndex:section];

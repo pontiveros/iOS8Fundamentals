@@ -15,23 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "1C153F851B039D5200187EB7"
-               BuildableName = "iOS8Fundamentals.app"
-               BlueprintName = "iOS8Fundamentals"
-               ReferencedContainer = "container:iOS8Fundamentals.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1C153FA11B039D5200187EB7"
-               BuildableName = "iOS8FundamentalsTests.xctest"
-               BlueprintName = "iOS8FundamentalsTests"
-               ReferencedContainer = "container:iOS8Fundamentals.xcodeproj">
+               BuildableName = "iOSWorkshop.app"
+               BlueprintName = "iOSWorkshop"
+               ReferencedContainer = "container:iOSWorkshop.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -42,24 +28,14 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1C153FA11B039D5200187EB7"
-               BuildableName = "iOS8FundamentalsTests.xctest"
-               BlueprintName = "iOS8FundamentalsTests"
-               ReferencedContainer = "container:iOS8Fundamentals.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1C153F851B039D5200187EB7"
-            BuildableName = "iOS8Fundamentals.app"
-            BlueprintName = "iOS8Fundamentals"
-            ReferencedContainer = "container:iOS8Fundamentals.xcodeproj">
+            BuildableName = "iOSWorkshop.app"
+            BlueprintName = "iOSWorkshop"
+            ReferencedContainer = "container:iOSWorkshop.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -77,9 +53,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1C153F851B039D5200187EB7"
-            BuildableName = "iOS8Fundamentals.app"
-            BlueprintName = "iOS8Fundamentals"
-            ReferencedContainer = "container:iOS8Fundamentals.xcodeproj">
+            BuildableName = "iOSWorkshop.app"
+            BlueprintName = "iOSWorkshop"
+            ReferencedContainer = "container:iOSWorkshop.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -96,9 +72,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1C153F851B039D5200187EB7"
-            BuildableName = "iOS8Fundamentals.app"
-            BlueprintName = "iOS8Fundamentals"
-            ReferencedContainer = "container:iOS8Fundamentals.xcodeproj">
+            BuildableName = "iOSWorkshop.app"
+            BlueprintName = "iOSWorkshop"
+            ReferencedContainer = "container:iOSWorkshop.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

@@ -55,7 +55,7 @@ static RegionMonitor *instance = nil;
         [self.locationManager startRangingBeaconsInRegion:region2];
         [self.locationManager startMonitoringForRegion:region2];
         
-        //    [self.locationManager startMonitoringVisits];
+//        [self.locationManager startMonitoringVisits];
         [self.locationManager startUpdatingLocation];
         [self.locationManager startMonitoringSignificantLocationChanges];
     }
