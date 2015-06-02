@@ -8,6 +8,8 @@
 
 #import "MultiThreadVC.h"
 #import "GrandCentralDispatchVC.h"
+#import "NSThreadVC.h"
+
 
 @interface MultiThreadVC ()
 
@@ -46,6 +48,12 @@
 - (void)openGCDVC
 {
     GrandCentralDispatchVC *vc = [[GrandCentralDispatchVC alloc] initWithNibName:@"GrandCentralDispatchView" bundle:nil];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (void)openNSThreadVC
+{
+    NSThreadVC *vc = [[NSThreadVC alloc] initWithNibName:@"NSThreadView" bundle:nil];
     [self.navigationController pushViewController:vc animated:YES];
 }
 

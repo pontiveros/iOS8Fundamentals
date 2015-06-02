@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NSThreadVC">
+            <connections>
+                <outlet property="btnWorker1" destination="Chu-Oh-5qn" id="2gf-As-zb6"/>
+                <outlet property="labelWorker1" destination="I6D-sc-n5r" id="nvb-Md-Qf2"/>
+                <outlet property="view" destination="iN0-l3-epB" id="RiZ-nv-JGC"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Chu-Oh-5qn">
+                    <rect key="frame" x="203" y="127" width="194" height="30"/>
+                    <state key="normal" title="Start worker 1">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="startWorker1:" destination="-1" eventType="touchUpInside" id="9MJ-Y2-BsG"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Worker 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I6D-sc-n5r">
+                    <rect key="frame" x="203" y="98" width="194" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="194" id="XCw-rx-cLe"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="Chu-Oh-5qn" firstAttribute="top" secondItem="I6D-sc-n5r" secondAttribute="bottom" constant="8" symbolic="YES" id="I35-AM-8EM"/>
+                <constraint firstItem="I6D-sc-n5r" firstAttribute="trailing" secondItem="Chu-Oh-5qn" secondAttribute="trailing" id="Q9W-OT-9hK"/>
+                <constraint firstItem="Chu-Oh-5qn" firstAttribute="leading" secondItem="I6D-sc-n5r" secondAttribute="leading" id="cfo-5x-fui"/>
+                <constraint firstItem="I6D-sc-n5r" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="nSK-6d-zzU"/>
+                <constraint firstItem="I6D-sc-n5r" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="98" id="vKO-7u-gVm"/>
+            </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+        </view>
+    </objects>
+</document>

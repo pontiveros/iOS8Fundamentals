@@ -24,6 +24,8 @@
 		1C5653BB1B03C9D600BBE07D /* IBeaconViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C5653BA1B03C9D600BBE07D /* IBeaconViewController.m */; };
 		1C5653BD1B03CCD400BBE07D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C5653BC1B03CCD400BBE07D /* CoreLocation.framework */; };
 		1C5653C01B04B6EB00BBE07D /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C5653BF1B04B6EB00BBE07D /* CoreBluetooth.framework */; };
+		1CA75F951B1C8F5C00ACDCB7 /* NSThreadVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA75F941B1C8F5C00ACDCB7 /* NSThreadVC.m */; };
+		1CA75F971B1C8F9000ACDCB7 /* NSThreadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1CA75F961B1C8F9000ACDCB7 /* NSThreadView.xib */; };
 		1CC9CCA21B041EF6001EB21A /* UIWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CC9CCA11B041EF6001EB21A /* UIWebViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +67,9 @@
 		1C5653BA1B03C9D600BBE07D /* IBeaconViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBeaconViewController.m; sourceTree = "<group>"; };
 		1C5653BC1B03CCD400BBE07D /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		1C5653BF1B04B6EB00BBE07D /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		1CA75F931B1C8F5C00ACDCB7 /* NSThreadVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSThreadVC.h; sourceTree = "<group>"; };
+		1CA75F941B1C8F5C00ACDCB7 /* NSThreadVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSThreadVC.m; sourceTree = "<group>"; };
+		1CA75F961B1C8F9000ACDCB7 /* NSThreadView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NSThreadView.xib; sourceTree = "<group>"; };
 		1CC9CCA01B041EF6001EB21A /* UIWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIWebViewController.h; sourceTree = "<group>"; };
 		1CC9CCA11B041EF6001EB21A /* UIWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIWebViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -169,6 +174,9 @@
 				1C168F251B1BED4D003957BD /* GrandCentralDispatchVC.h */,
 				1C168F261B1BED4D003957BD /* GrandCentralDispatchVC.m */,
 				1C168F281B1BED91003957BD /* GrandCentralDispatchView.xib */,
+				1CA75F931B1C8F5C00ACDCB7 /* NSThreadVC.h */,
+				1CA75F941B1C8F5C00ACDCB7 /* NSThreadVC.m */,
+				1CA75F961B1C8F9000ACDCB7 /* NSThreadView.xib */,
 			);
 			name = ThreadPrograming;
 			sourceTree = "<group>";
@@ -269,6 +277,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1C5653B81B03C99900BBE07D /* IBeaconView.xib in Resources */,
+				1CA75F971B1C8F9000ACDCB7 /* NSThreadView.xib in Resources */,
 				1C168F291B1BED91003957BD /* GrandCentralDispatchView.xib in Resources */,
 				1C168F231B1A50A7003957BD /* MultiThreadView.xib in Resources */,
 				1C153F981B039D5200187EB7 /* Main.storyboard in Resources */,
@@ -291,6 +300,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1CA75F951B1C8F5C00ACDCB7 /* NSThreadVC.m in Sources */,
 				1C153F8F1B039D5200187EB7 /* AppDelegate.m in Sources */,
 				1C153F921B039D5200187EB7 /* iOSWorkshop.xcdatamodeld in Sources */,
 				1C5653BB1B03C9D600BBE07D /* IBeaconViewController.m in Sources */,
