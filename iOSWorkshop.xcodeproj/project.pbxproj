@@ -438,10 +438,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Pedro Ontiveros (R33N75DBJE)";
 				INFOPLIST_FILE = iOS8Fundamentals/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = iOSWorkshop;
+				PROVISIONING_PROFILE = "3b10df13-be3e-42d5-afe2-af8faa2061eb";
 			};
 			name = Debug;
 		};
@@ -450,10 +452,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = iOS8Fundamentals/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = iOSWorkshop;
+				PROVISIONING_PROFILE = "3b10df13-be3e-42d5-afe2-af8faa2061eb";
 			};
 			name = Release;
 		};

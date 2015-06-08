@@ -13,6 +13,6 @@
 @property (nonatomic, retain)IBOutlet UILabel  *labelWorker1;
 @property (nonatomic, retain)IBOutlet UIButton *btnWorker1;
 
-@property(nonatomic) BOOL flagWorker1;
+@property(atomic) BOOL flagWorker1;
 
 @end

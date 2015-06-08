@@ -57,6 +57,7 @@
 - (void)nsWorker1
 {
     NSLog(@"Start nsworker1...");
+    
     __block int counter = 0;
     __weak NSThreadVC *pSelf = self;
     
