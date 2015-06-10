@@ -8,6 +8,21 @@
 
 #import "NSThreadVC.h"
 
+typedef long(^procedure_01)(NSString* arg1);
+
+procedure_01 proc01 = ^long(NSString *arg1) {
+    NSLog(@"%@", arg1);
+    return arg1.length;
+};
+
+procedure_01 proc02 = ^long(NSString* arg1) {
+
+    for (long i = (arg1.length - 1); i >= 0; i--) {
+        NSLog(@"%c", [arg1 characterAtIndex:i]);
+    }
+    return 0;
+};
+
 @interface NSThreadVC ()
 
 @end
@@ -70,6 +85,19 @@
     }
     
     NSLog(@"nsWorker1 finished.");
+}
+
+#pragma mark - BLOCKS AND MORE
+
+- (IBAction)onTouchBlock01:(id)sender
+{
+    [self testingBlock1];
+}
+
+- (void)testingBlock1
+{
+    long length = proc02(@"Mensaje de Pedro Ontiveros.");
+    NSLog(@"Length: %ld", length);
 }
 
 @end
