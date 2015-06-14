@@ -12,5 +12,8 @@
 
 
 @property (nonatomic, retain) IBOutlet UILabel *worker1Label;
+@property (strong)dispatch_queue_t serialQueue01;
+@property (strong)dispatch_queue_t concurrentQueue02;
+@property (assign, atomic) BOOL useBarrierBLock;
 
 @end

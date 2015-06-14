@@ -10,6 +10,7 @@
 #import "IBeaconViewController.h"
 #import "UIWebViewController.h"
 #import "MultiThreadVC.h"
+#import "NetworkingVC.h"
 
 @interface RootViewController ()
 
@@ -84,6 +85,12 @@
 - (void)openMultithreadVC
 {
     MultiThreadVC *vc = [[MultiThreadVC alloc] initWithNibName:@"MultiThreadView" bundle:nil];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (void)openFilesAndNetworking
+{
+    NetworkingVC *vc = [[NetworkingVC alloc] initWithNibName:@"NetworkingView" bundle:nil];
     [self.navigationController pushViewController:vc animated:YES];
 }
 

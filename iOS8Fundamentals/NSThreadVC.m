@@ -16,11 +16,13 @@ procedure_01 proc01 = ^long(NSString *arg1) {
 };
 
 procedure_01 proc02 = ^long(NSString* arg1) {
-
+    unsigned long counter = 0;
+    
     for (long i = (arg1.length - 1); i >= 0; i--) {
         NSLog(@"%c", [arg1 characterAtIndex:i]);
+        counter++;
     }
-    return 0;
+    return counter;
 };
 
 @interface NSThreadVC ()
@@ -96,8 +98,12 @@ procedure_01 proc02 = ^long(NSString* arg1) {
 
 - (void)testingBlock1
 {
-    long length = proc02(@"Mensaje de Pedro Ontiveros.");
+    // This code runs in main thread.
+    long length = proc01(@"Checking the first message.");
     NSLog(@"Length: %ld", length);
+    
+    length = proc02(@"This message has been written by me.");
+    NSLog(@"Result: %ld", length);
 }
 
 @end

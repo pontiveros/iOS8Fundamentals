@@ -19,7 +19,7 @@
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q1s-Wc-wpe">
                     <rect key="frame" x="279" y="89" width="42" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="48Q-3O-vnf">
@@ -34,16 +34,62 @@
                         <action selector="startWorker1:" destination="-1" eventType="touchUpInside" id="mCZ-cy-ojv"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tW3-Wj-0TS">
+                    <rect key="frame" x="168" y="156" width="265" height="30"/>
+                    <color key="backgroundColor" red="0.40000000596046448" green="0.80000001192092896" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="Serial Queue 1">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="startWorker2:" destination="-1" eventType="touchUpInside" id="oy9-cI-TbW"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="chV-nH-sxg">
+                    <rect key="frame" x="168" y="252" width="265" height="30"/>
+                    <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="Concurrent Queue 2">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="startWorker03:" destination="-1" eventType="touchUpInside" id="MlO-wb-6YT"/>
+                    </connections>
+                </button>
+                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="qEe-qb-wiG">
+                    <rect key="frame" x="384" y="213" width="51" height="31"/>
+                    <connections>
+                        <action selector="useBarrierBlock:" destination="-1" eventType="valueChanged" id="u97-ip-82C"/>
+                    </connections>
+                </switch>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Use barrier block" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rR5-Xi-jWI">
+                    <rect key="frame" x="168" y="223" width="208" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="208" id="Cnb-hp-ewr"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="qEe-qb-wiG" firstAttribute="leading" secondItem="rR5-Xi-jWI" secondAttribute="trailing" constant="8" symbolic="YES" id="6Gy-Ek-EKa"/>
+                <constraint firstItem="tW3-Wj-0TS" firstAttribute="leading" secondItem="rR5-Xi-jWI" secondAttribute="leading" id="6UB-QI-jET"/>
+                <constraint firstItem="tW3-Wj-0TS" firstAttribute="top" secondItem="48Q-3O-vnf" secondAttribute="bottom" constant="8" symbolic="YES" id="9Xb-Nq-4Kc"/>
                 <constraint firstItem="Q1s-Wc-wpe" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="64" id="9dx-k5-Sd0"/>
                 <constraint firstItem="Q1s-Wc-wpe" firstAttribute="centerX" secondItem="48Q-3O-vnf" secondAttribute="centerX" id="EPq-XX-hpN"/>
+                <constraint firstItem="tW3-Wj-0TS" firstAttribute="centerX" secondItem="48Q-3O-vnf" secondAttribute="centerX" id="Fbu-9B-IA5"/>
+                <constraint firstItem="chV-nH-sxg" firstAttribute="leading" secondItem="rR5-Xi-jWI" secondAttribute="leading" id="JWb-7s-Ggh"/>
+                <constraint firstItem="qEe-qb-wiG" firstAttribute="top" secondItem="tW3-Wj-0TS" secondAttribute="bottom" constant="27" id="JXO-i1-DRh"/>
                 <constraint firstItem="48Q-3O-vnf" firstAttribute="top" secondItem="Q1s-Wc-wpe" secondAttribute="bottom" constant="8" symbolic="YES" id="OQ4-dL-aah"/>
+                <constraint firstItem="tW3-Wj-0TS" firstAttribute="trailing" secondItem="qEe-qb-wiG" secondAttribute="trailing" id="P8v-hm-0ex"/>
+                <constraint firstItem="chV-nH-sxg" firstAttribute="trailing" secondItem="qEe-qb-wiG" secondAttribute="trailing" id="cLl-IZ-c4g"/>
                 <constraint firstItem="48Q-3O-vnf" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="gI6-Sj-5Sk"/>
+                <constraint firstItem="chV-nH-sxg" firstAttribute="top" secondItem="rR5-Xi-jWI" secondAttribute="bottom" constant="8" symbolic="YES" id="hLY-7J-jH7"/>
+                <constraint firstItem="chV-nH-sxg" firstAttribute="top" secondItem="qEe-qb-wiG" secondAttribute="bottom" constant="8" symbolic="YES" id="jpG-H6-WB1"/>
             </constraints>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+            <point key="canvasLocation" x="506" y="356"/>
         </view>
     </objects>
 </document>
