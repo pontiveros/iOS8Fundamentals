@@ -11,6 +11,7 @@
 #import "UIWebViewController.h"
 #import "MultiThreadVC.h"
 #import "NetworkingVC.h"
+#import "CameraVC.h"
 
 @interface RootViewController ()
 
@@ -91,6 +92,12 @@
 - (void)openFilesAndNetworking
 {
     NetworkingVC *vc = [[NetworkingVC alloc] initWithNibName:@"NetworkingView" bundle:nil];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (void)openCamera
+{
+    CameraVC *vc = [[CameraVC alloc] initWithNibName:@"CameraView" bundle:nil];
     [self.navigationController pushViewController:vc animated:YES];
 }
 
