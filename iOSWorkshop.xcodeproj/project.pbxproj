@@ -128,6 +128,9 @@
 		1C153F881B039D5200187EB7 /* iOSWorkshop */ = {
 			isa = PBXGroup;
 			children = (
+				1C8D2D2B1B308DFC0094ED97 /* Services */,
+				1C0B965D1B0677A300E43B62 /* RegionMonitor.h */,
+				1C0B965E1B0677A300E43B62 /* RegionMonitor.m */,
 				1C4992091B2CE9A00011048B /* Networking */,
 				1C168F241B1BED20003957BD /* ThreadPrograming */,
 				1C153F8D1B039D5200187EB7 /* AppDelegate.h */,
@@ -140,8 +143,6 @@
 				1C5653B71B03C99900BBE07D /* IBeaconView.xib */,
 				1C5653B91B03C9D600BBE07D /* IBeaconViewController.h */,
 				1C5653BA1B03C9D600BBE07D /* IBeaconViewController.m */,
-				1C0B965D1B0677A300E43B62 /* RegionMonitor.h */,
-				1C0B965E1B0677A300E43B62 /* RegionMonitor.m */,
 				1CECEF1D1B2FAFCC00A1CA73 /* CameraVC.h */,
 				1CECEF1E1B2FAFCC00A1CA73 /* CameraVC.m */,
 				1CECEF211B2FB06800A1CA73 /* CameraView.xib */,
@@ -214,6 +215,13 @@
 				1C5653BC1B03CCD400BBE07D /* CoreLocation.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1C8D2D2B1B308DFC0094ED97 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
