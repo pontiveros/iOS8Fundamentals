@@ -16,6 +16,16 @@
             startingLineNumber = "39"
             endingLineNumber = "39"
             landmarkName = "-fillRootTable"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iOS8Fundamentals/RegionMonitor.m"
+            timestampString = "453501817.43008"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "-startRegionMonitor"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

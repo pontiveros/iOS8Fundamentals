@@ -137,7 +137,9 @@
 		1C153F881B039D5200187EB7 /* iOSWorkshop */ = {
 			isa = PBXGroup;
 			children = (
-				1C06A13C1B30AC1300DB0440 /* Service */,
+				1C8D2D2B1B308DFC0094ED97 /* Services */,
+				1C0B965D1B0677A300E43B62 /* RegionMonitor.h */,
+				1C0B965E1B0677A300E43B62 /* RegionMonitor.m */,
 				1C4992091B2CE9A00011048B /* Networking */,
 				1C168F241B1BED20003957BD /* ThreadPrograming */,
 				1C153F8D1B039D5200187EB7 /* AppDelegate.h */,
@@ -222,6 +224,13 @@
 				1C5653BC1B03CCD400BBE07D /* CoreLocation.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1C8D2D2B1B308DFC0094ED97 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
