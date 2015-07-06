@@ -45,7 +45,7 @@ static RegionMonitor *instance = nil;
         CLBeaconRegion *region0 = [[CLBeaconRegion alloc] initWithProximityUUID:uuid0 major:5 minor:1000 identifier:@"UbiClip0"];
         CLBeaconRegion *region1 = [[CLBeaconRegion alloc] initWithProximityUUID:uuid1 major:5 minor:1000 identifier:@"UbiClip1"];
         CLBeaconRegion *region2 = [[CLBeaconRegion alloc] initWithProximityUUID:uuid2 major:5 minor:1000 identifier:@"iPadAir"];
-        
+
         [self.locationManager startRangingBeaconsInRegion:region0];
         [self.locationManager startMonitoringForRegion:region0];
         
