@@ -49,8 +49,10 @@
 
 - (IBAction)onTouchArray:(id)sender
 {
-    [self arrayAllocation];
-    [self arrayFactory];
+//    [self arrayAllocation];
+//    [self arrayFactory];
+//    [self mutableArrayMemManagement];
+    [self circularReferenceMutableArray];
 }
 
 - (void)arrayAllocation
@@ -106,9 +108,51 @@
 {
     NSMutableString *str1 = [[NSMutableString alloc] init];
     NSMutableString *str2 = [[NSMutableString alloc] init];
+    NSMutableString *str3 = [[NSMutableString alloc] init];
     
+    NSMutableArray *arr1 = [[NSMutableArray alloc] init];
+    
+    [str1 appendFormat:@"person 1"];
+    [str2 appendFormat:@"person 2"];
+    [str3 appendFormat:@"person 3"];
+    
+    [arr1 addObject:str1]; // increment retainCount str1
+    [arr1 addObject:str2]; // increment retainCount str2
+    [arr1 addObject:str3]; // increment retainCount str3
+    
+    NSLog(@"str1 retainCount: %ld", [str1 retainCount]); // ?
+    NSLog(@"str2 retainCount: %ld", [str2 retainCount]); // ?
+    NSLog(@"str3 retainCount: %ld", [str3 retainCount]); // ?
+    
+    [str1 release];
+    [str2 release];
+    [str3 release];
+    
+    NSLog(@"str1 retainCount: %ld", [str1 retainCount]);
+    NSLog(@"str2 retainCount: %ld", [str2 retainCount]);
+    NSLog(@"str3 retainCount: %ld", [str3 retainCount]);
+    
+    [arr1 release];
+    
+//    NSLog(@"str1 retainCount: %ld", [str1 retainCount]); // this will work ?
+//    NSLog(@"str2 retainCount: %ld", [str2 retainCount]); // this will work ?
+//    NSLog(@"str3 retainCount: %ld", [str3 retainCount]); // this will work ?
 }
 
+- (void)circularReferenceMutableArray
+{
+    NSMutableArray *arr1 = [[NSMutableArray alloc] init];
+    NSMutableArray *arr2 = [[NSMutableArray alloc] init];
+    
+    [arr1 addObject:arr2];
+    [arr2 addObject:arr1];
+    
+    NSLog(@"arr1 retainCount: %ld", [arr1 retainCount]); // retain count ?
+    NSLog(@"arr2 retainCount: %ld", [arr2 retainCount]); // retain count ?
+    
+    [arr1 release];
+    [arr2 release];
+}
 /*
 #pragma mark - Navigation
  
