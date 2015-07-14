@@ -12,6 +12,8 @@
 #import "MultiThreadVC.h"
 #import "NetworkingVC.h"
 #import "CameraVC.h"
+#import "UIMemoryManagementVC.h"
+
 
 @interface RootViewController ()
 
@@ -98,6 +100,12 @@
 - (void)openCamera
 {
     CameraVC *vc = [[CameraVC alloc] initWithNibName:@"CameraView" bundle:nil];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (void)openMemoryManagement
+{
+    UIMemoryManagementVC *vc = [[UIMemoryManagementVC alloc] initWithNibName:@"UIMemoryManagementView" bundle:nil];
     [self.navigationController pushViewController:vc animated:YES];
 }
 

@@ -20,6 +20,10 @@
 		1C168F231B1A50A7003957BD /* MultiThreadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C168F221B1A50A7003957BD /* MultiThreadView.xib */; };
 		1C168F271B1BED4D003957BD /* GrandCentralDispatchVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C168F261B1BED4D003957BD /* GrandCentralDispatchVC.m */; };
 		1C168F291B1BED91003957BD /* GrandCentralDispatchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C168F281B1BED91003957BD /* GrandCentralDispatchView.xib */; };
+		1C325AD01B5405E400AE613F /* UIMemoryManagementVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C325ACF1B5405E400AE613F /* UIMemoryManagementVC.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		1C325AD21B54061300AE613F /* UIMemoryManagementView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C325AD11B54061300AE613F /* UIMemoryManagementView.xib */; };
+		1C325AD71B541B5800AE613F /* NSEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C325AD61B541B5800AE613F /* NSEntity.m */; };
+		1C325ADA1B5453DD00AE613F /* NSCustomer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C325AD91B5453DD00AE613F /* NSCustomer.m */; };
 		1C49920C1B2CE9F60011048B /* NetworkingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C49920B1B2CE9F60011048B /* NetworkingVC.m */; };
 		1C49920E1B2CEA1C0011048B /* NetworkingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C49920D1B2CEA1C0011048B /* NetworkingView.xib */; };
 		1C5653B81B03C99900BBE07D /* IBeaconView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C5653B71B03C99900BBE07D /* IBeaconView.xib */; };
@@ -68,6 +72,13 @@
 		1C168F251B1BED4D003957BD /* GrandCentralDispatchVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GrandCentralDispatchVC.h; sourceTree = "<group>"; };
 		1C168F261B1BED4D003957BD /* GrandCentralDispatchVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GrandCentralDispatchVC.m; sourceTree = "<group>"; };
 		1C168F281B1BED91003957BD /* GrandCentralDispatchView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GrandCentralDispatchView.xib; sourceTree = "<group>"; };
+		1C325ACE1B5405E400AE613F /* UIMemoryManagementVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIMemoryManagementVC.h; sourceTree = "<group>"; };
+		1C325ACF1B5405E400AE613F /* UIMemoryManagementVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIMemoryManagementVC.m; sourceTree = "<group>"; };
+		1C325AD11B54061300AE613F /* UIMemoryManagementView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UIMemoryManagementView.xib; sourceTree = "<group>"; };
+		1C325AD51B541B5800AE613F /* NSEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSEntity.h; sourceTree = "<group>"; };
+		1C325AD61B541B5800AE613F /* NSEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSEntity.m; sourceTree = "<group>"; };
+		1C325AD81B5453DD00AE613F /* NSCustomer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSCustomer.h; sourceTree = "<group>"; };
+		1C325AD91B5453DD00AE613F /* NSCustomer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSCustomer.m; sourceTree = "<group>"; };
 		1C49920A1B2CE9F60011048B /* NetworkingVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkingVC.h; sourceTree = "<group>"; };
 		1C49920B1B2CE9F60011048B /* NetworkingVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkingVC.m; sourceTree = "<group>"; };
 		1C49920D1B2CEA1C0011048B /* NetworkingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NetworkingView.xib; sourceTree = "<group>"; };
@@ -106,15 +117,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1C06A13C1B30AC1300DB0440 /* Service */ = {
-			isa = PBXGroup;
-			children = (
-				1C0B965D1B0677A300E43B62 /* RegionMonitor.h */,
-				1C0B965E1B0677A300E43B62 /* RegionMonitor.m */,
-			);
-			name = Service;
-			sourceTree = "<group>";
-		};
 		1C153F7D1B039D5200187EB7 = {
 			isa = PBXGroup;
 			children = (
@@ -137,6 +139,7 @@
 		1C153F881B039D5200187EB7 /* iOSWorkshop */ = {
 			isa = PBXGroup;
 			children = (
+				1C325AD41B541B2500AE613F /* DummyClasses */,
 				1C8D2D2B1B308DFC0094ED97 /* Services */,
 				1C0B965D1B0677A300E43B62 /* RegionMonitor.h */,
 				1C0B965E1B0677A300E43B62 /* RegionMonitor.m */,
@@ -152,6 +155,9 @@
 				1C5653B71B03C99900BBE07D /* IBeaconView.xib */,
 				1C5653B91B03C9D600BBE07D /* IBeaconViewController.h */,
 				1C5653BA1B03C9D600BBE07D /* IBeaconViewController.m */,
+				1C325ACE1B5405E400AE613F /* UIMemoryManagementVC.h */,
+				1C325ACF1B5405E400AE613F /* UIMemoryManagementVC.m */,
+				1C325AD11B54061300AE613F /* UIMemoryManagementView.xib */,
 				1CECEF1D1B2FAFCC00A1CA73 /* CameraVC.h */,
 				1CECEF1E1B2FAFCC00A1CA73 /* CameraVC.m */,
 				1CECEF211B2FB06800A1CA73 /* CameraView.xib */,
@@ -205,6 +211,17 @@
 				1CA75F961B1C8F9000ACDCB7 /* NSThreadView.xib */,
 			);
 			name = ThreadPrograming;
+			sourceTree = "<group>";
+		};
+		1C325AD41B541B2500AE613F /* DummyClasses */ = {
+			isa = PBXGroup;
+			children = (
+				1C325AD51B541B5800AE613F /* NSEntity.h */,
+				1C325AD61B541B5800AE613F /* NSEntity.m */,
+				1C325AD81B5453DD00AE613F /* NSCustomer.h */,
+				1C325AD91B5453DD00AE613F /* NSCustomer.m */,
+			);
+			name = DummyClasses;
 			sourceTree = "<group>";
 		};
 		1C4992091B2CE9A00011048B /* Networking */ = {
@@ -327,6 +344,7 @@
 				1C153F981B039D5200187EB7 /* Main.storyboard in Resources */,
 				1C153F9D1B039D5200187EB7 /* LaunchScreen.xib in Resources */,
 				1C49920E1B2CEA1C0011048B /* NetworkingView.xib in Resources */,
+				1C325AD21B54061300AE613F /* UIMemoryManagementView.xib in Resources */,
 				1C153F9A1B039D5200187EB7 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -346,12 +364,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C325ADA1B5453DD00AE613F /* NSCustomer.m in Sources */,
 				1CA75F951B1C8F5C00ACDCB7 /* NSThreadVC.m in Sources */,
 				1C153F8F1B039D5200187EB7 /* AppDelegate.m in Sources */,
 				1C153F921B039D5200187EB7 /* iOSWorkshop.xcdatamodeld in Sources */,
 				1C5653BB1B03C9D600BBE07D /* IBeaconViewController.m in Sources */,
 				1C168F271B1BED4D003957BD /* GrandCentralDispatchVC.m in Sources */,
 				1CC9CCA21B041EF6001EB21A /* UIWebViewController.m in Sources */,
+				1C325AD01B5405E400AE613F /* UIMemoryManagementVC.m in Sources */,
+				1C325AD71B541B5800AE613F /* NSEntity.m in Sources */,
 				1C153F951B039D5200187EB7 /* RootViewController.m in Sources */,
 				1CECEF1F1B2FAFCC00A1CA73 /* CameraVC.m in Sources */,
 				1C0B965F1B0677A300E43B62 /* RegionMonitor.m in Sources */,
