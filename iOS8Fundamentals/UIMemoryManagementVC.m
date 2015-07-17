@@ -7,8 +7,12 @@
 //
 
 #import "UIMemoryManagementVC.h"
+#import "NSCustomer.h"
 
 @interface UIMemoryManagementVC ()
+{
+    NSMutableString *mutableLabel;
+}
 
 @end
 
@@ -17,6 +21,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.title = @"Memory Management";
+    mutableLabel = [[NSMutableString alloc] init];
+    [mutableLabel appendString:@"Message from Extension."];
+
     // Do any additional setup after loading the view.
     
     ////////    ////////    ////////    ////////    ////////    ////////
@@ -28,6 +36,12 @@
     // Unlike dispatch_async, this function does not return until the block has finished.
     // Calling this function and targeting the current queue results in deadlock.
     ////////    ////////    ////////    ////////    ////////    ////////
+}
+
+- (void)dealloc
+{
+    [mutableLabel release];
+    [super dealloc];
 }
 
 - (void)didReceiveMemoryWarning
@@ -45,6 +59,7 @@
                                           otherButtonTitles:nil];
     
     [alert show];
+    [alert release];
 }
 
 - (IBAction)onTouchArray:(id)sender
@@ -52,7 +67,16 @@
 //    [self arrayAllocation];
 //    [self arrayFactory];
 //    [self mutableArrayMemManagement];
-    [self circularReferenceMutableArray];
+//    [self circularReferenceMutableArray];
+}
+
+- (IBAction)onTouchSortingArray:(id)sender
+{
+//    [self testSortNSArrayWithNumbers];
+//    [self sortNSArrayStringWithSelector];
+    [self sortEntityArray];
+    NSLog(@"Mutable String message: %@", mutableLabel);
+    [self showAlert];
 }
 
 - (void)arrayAllocation
@@ -106,7 +130,7 @@
 
 - (void)mutableArrayMemManagement
 {
-    NSMutableString *str1 = [[NSMutableString alloc] init];
+    NSMutableString *str1 = [[NSMutableString alloc] init]; // retain count 1
     NSMutableString *str2 = [[NSMutableString alloc] init];
     NSMutableString *str3 = [[NSMutableString alloc] init];
     
@@ -132,6 +156,7 @@
     NSLog(@"str2 retainCount: %ld", [str2 retainCount]);
     NSLog(@"str3 retainCount: %ld", [str3 retainCount]);
     
+    [arr1 removeAllObjects];
     [arr1 release];
     
 //    NSLog(@"str1 retainCount: %ld", [str1 retainCount]); // this will work ?
@@ -153,6 +178,83 @@
     [arr1 release];
     [arr2 release];
 }
+
+- (void)testSortNSArrayWithNumbers
+{
+    int max = 100;
+    NSMutableArray *arr = [[NSMutableArray alloc] init];
+    for (int i = 0; i < max; i++) {
+        [arr addObject:[NSNumber numberWithInt:rand() / 900000]];
+    }
+    
+    [self printNumbers:arr];
+    [self sortNSMutableArrayBySortDescriptor:arr];
+    [self sortNSMutableArrayBySelector:arr];
+    [self printNumbers:arr];
+    
+    [arr release];
+}
+
+- (void)printNumbers:(NSArray*)items
+{
+    for (NSNumber* item in items) {
+        NSLog(@"%@", [item stringValue]);
+    }
+}
+
+- (void)sortNSMutableArrayBySortDescriptor:(NSArray*)array
+{
+    NSSortDescriptor *descriptor = [NSSortDescriptor sortDescriptorWithKey:@"self" ascending:YES];
+    NSArray *sortArray = [array sortedArrayUsingDescriptors:[NSArray arrayWithObjects:descriptor, nil]]; // This method creates a copy of array.
+    [self printNumbers:sortArray];
+    
+    NSLog(@"array retain count: %ld", [array retainCount]);
+    NSLog(@"sortArray retain count: %ld", [sortArray retainCount]);
+}
+
+- (void)sortNSMutableArrayBySelector:(NSArray*)array
+{
+    NSArray *sortArray = [array sortedArrayUsingSelector:@selector(compare:)];
+    [self printNumbers:sortArray];
+    NSLog(@"Finish.");
+}
+
+- (void)sortNSArrayStringWithSelector
+{
+    NSArray *array = @[@"Blue", @"Red", @"Black", @"Yellow", @"White", @"Brown", @"Green"];
+    NSLog(@"Unsorted Array: %@", array);
+    NSArray *sortedArray = [array sortedArrayUsingSelector:@selector(compare:)];
+    NSLog(@"Sorted Array: %@", sortedArray);
+}
+
+- (void)sortEntityArray
+{
+    NSArray *sortedArray = nil;
+    @autoreleasepool {
+        NSMutableArray *custArray = [[NSMutableArray alloc] init];
+    
+        [custArray addObject:[[[NSCustomer alloc] initWithIdentification:[NSNumber numberWithInt:1] andName:@"Toshiba"] autorelease]];
+        [custArray addObject:[[[NSCustomer alloc] initWithIdentification:[NSNumber numberWithInt:2] andName:@"Apple"] autorelease]];
+        [custArray addObject:[[[NSCustomer alloc] initWithIdentification:[NSNumber numberWithInt:3] andName:@"Dell"] autorelease]];
+        [custArray addObject:[[[NSCustomer alloc] initWithIdentification:[NSNumber numberWithInt:4] andName:@"Hewlet Packard"] autorelease]];
+        [custArray addObject:[[[NSCustomer alloc] initWithIdentification:[NSNumber numberWithInt:5] andName:@"Samsung"] autorelease]];
+        
+        for (NSEntity *entity in custArray) {
+            NSLog(@"%@", [entity description]);
+        }
+        
+        sortedArray = [[custArray sortedArrayUsingSelector:@selector(compare:)] copy]; // where is implemented "compare:" method ?
+        
+//        [custArray release];
+    }
+    
+    for (NSEntity *entity in sortedArray) {
+        NSLog(@"%@", [entity description]);
+    }
+    
+    [sortedArray release];
+}
+
 /*
 #pragma mark - Navigation
  

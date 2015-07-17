@@ -56,4 +56,10 @@
     [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
 }
 
+- (void)runInBackground
+{
+    NSString *script = @"showAlert();";
+    [self.webView stringByEvaluatingJavaScriptFromString:script];
+}
+
 @end

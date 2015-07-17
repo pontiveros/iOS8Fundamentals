@@ -13,4 +13,9 @@
 @property (nonatomic, retain)NSString *name;
 @property (nonatomic, retain)NSNumber *identification;
 
+- (id)init;
+- (id)initWithIdentification:(NSNumber*)identification andName:(NSString*)name;
+- (NSString*)description;
+- (NSComparisonResult)compare:(NSEntity*)entity;
+
 @end

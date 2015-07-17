@@ -10,4 +10,12 @@
 
 @implementation NSCustomer
 
+- (id)init
+{
+    if (self = [super init]) {
+        
+    }
+    return self;
+}
+
 @end

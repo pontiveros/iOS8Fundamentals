@@ -24,11 +24,22 @@
                         <action selector="onTouchArray:" destination="-1" eventType="touchUpInside" id="OTt-SN-qJO"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c35-93-uKu">
+                    <rect key="frame" x="245" y="162" width="111" height="30"/>
+                    <state key="normal" title="Sorting NSArray">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="onTouchSortingArray:" destination="-1" eventType="touchUpInside" id="etl-eU-mUL"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="c35-93-uKu" firstAttribute="top" secondItem="krp-xA-m6n" secondAttribute="bottom" constant="29" id="BOW-gB-xVD"/>
                 <constraint firstItem="krp-xA-m6n" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="THU-Tz-u3u"/>
                 <constraint firstItem="krp-xA-m6n" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="103" id="h6L-GA-ZYE"/>
+                <constraint firstItem="c35-93-uKu" firstAttribute="centerX" secondItem="krp-xA-m6n" secondAttribute="centerX" id="nL9-4t-Hu9"/>
             </constraints>
             <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
         </view>
