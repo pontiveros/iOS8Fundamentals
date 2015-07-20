@@ -76,7 +76,21 @@
 //    [self sortNSArrayStringWithSelector];
     [self sortEntityArray];
     NSLog(@"Mutable String message: %@", mutableLabel);
-    [self showAlert];
+//    [self showAlert];
+}
+
+- (IBAction)onTouchAutoreleasePool:(id)sender
+{
+    NSMutableString *message = nil;
+    
+    @autoreleasepool {
+        message = [[[NSMutableString alloc] init] autorelease]; // message will be released after this block.
+        [message appendString:@"Message from Autorelease pool."];
+        NSLog(@"Message: %@", message);
+    }
+    
+    NSLog(@"Message to delay the processor activity.");
+    NSLog(@"Message: %@", message); // What will happen here ? (will crash!)
 }
 
 - (void)arrayAllocation
@@ -245,7 +259,7 @@
         
         sortedArray = [[custArray sortedArrayUsingSelector:@selector(compare:)] copy]; // where is implemented "compare:" method ?
         
-//        [custArray release];
+        [custArray release];
     }
     
     for (NSEntity *entity in sortedArray) {

@@ -16,7 +16,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="krp-xA-m6n">
-                    <rect key="frame" x="238" y="103" width="125" height="30"/>
+                    <rect key="frame" x="238" y="128" width="125" height="30"/>
                     <state key="normal" title="NSArray vs NSSet">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -24,8 +24,17 @@
                         <action selector="onTouchArray:" destination="-1" eventType="touchUpInside" id="OTt-SN-qJO"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t20-Nu-Ln3">
+                    <rect key="frame" x="242" y="84" width="116" height="30"/>
+                    <state key="normal" title="Autorelease pool">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="onTouchAutoreleasePool:" destination="-1" eventType="touchUpInside" id="iyM-DQ-XfN"/>
+                    </connections>
+                </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c35-93-uKu">
-                    <rect key="frame" x="245" y="162" width="111" height="30"/>
+                    <rect key="frame" x="247" y="174" width="111" height="30"/>
                     <state key="normal" title="Sorting NSArray">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -36,10 +45,12 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="c35-93-uKu" firstAttribute="top" secondItem="krp-xA-m6n" secondAttribute="bottom" constant="29" id="BOW-gB-xVD"/>
-                <constraint firstItem="krp-xA-m6n" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="THU-Tz-u3u"/>
-                <constraint firstItem="krp-xA-m6n" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="103" id="h6L-GA-ZYE"/>
-                <constraint firstItem="c35-93-uKu" firstAttribute="centerX" secondItem="krp-xA-m6n" secondAttribute="centerX" id="nL9-4t-Hu9"/>
+                <constraint firstItem="t20-Nu-Ln3" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Jtz-wR-kLf"/>
+                <constraint firstItem="t20-Nu-Ln3" firstAttribute="trailing" secondItem="c35-93-uKu" secondAttribute="trailing" id="MfS-CT-BW6"/>
+                <constraint firstItem="t20-Nu-Ln3" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="84" id="QSX-t8-O3d"/>
+                <constraint firstItem="krp-xA-m6n" firstAttribute="top" secondItem="t20-Nu-Ln3" secondAttribute="bottom" constant="14" id="YFJ-35-tMy"/>
+                <constraint firstItem="c35-93-uKu" firstAttribute="top" secondItem="krp-xA-m6n" secondAttribute="bottom" constant="16" id="qNK-Y2-o01"/>
+                <constraint firstItem="krp-xA-m6n" firstAttribute="centerX" secondItem="t20-Nu-Ln3" secondAttribute="centerX" id="sjZ-i3-aAu"/>
             </constraints>
             <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
         </view>
