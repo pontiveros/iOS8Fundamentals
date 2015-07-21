@@ -13,9 +13,26 @@
 - (id)init
 {
     if (self = [super init]) {
-        
+        self.items = [[NSMutableArray alloc] init];
     }
     return self;
+}
+
+- (id)initWithIdentification:(NSNumber *)identification andName:(NSString *)name
+{
+    if (self = [super initWithIdentification:identification andName:name]) {
+        self.items = [[NSMutableArray alloc] init];
+    }
+    return self;
+}
+
+- (id)copyWithZone:(NSZone*)zone
+{
+    NSCustomer *customer = [[NSCustomer alloc] initWithIdentification:self.identification andName:self.name];
+    for (NSString *item in self.items) {
+        [customer.items addObject:[item copy]];
+    }
+    return customer;
 }
 
 @end

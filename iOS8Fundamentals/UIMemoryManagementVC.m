@@ -68,6 +68,7 @@
 //    [self arrayFactory];
 //    [self mutableArrayMemManagement];
 //    [self circularReferenceMutableArray];
+    [self testNSStringAllocation];
 }
 
 - (IBAction)onTouchSortingArray:(id)sender
@@ -91,6 +92,26 @@
     
     NSLog(@"Message to delay the processor activity.");
     NSLog(@"Message: %@", message); // What will happen here ? (will crash!)
+}
+
+- (IBAction)onTouchNSCopying:(id)sender
+{
+    NSLog(@"Message from NSCopying...");
+    NSCustomer *cus1 = [[NSCustomer alloc] initWithIdentification:[NSNumber numberWithInt:100] andName:@"Microsoft"];
+    [cus1.items addObject:@"CEO: Steve Ballmer"];
+    NSCustomer *cus2 = [cus1 copy];
+    
+    NSLog(@"step 1 - cus1: %@", cus1.name);
+    NSLog(@"step 1 - cus2: %@", cus2.name);
+    
+    cus1.name = @"IBM";
+    [cus1.items addObject:@"CTO: Akawa Saky"];
+    
+    NSLog(@"step 2 - cus1: %@", cus1.name);
+    NSLog(@"step 2 - cus2: %@", cus2.name);
+    
+    [cus1 release];
+    [cus2 release];
 }
 
 - (void)arrayAllocation
@@ -267,6 +288,22 @@
     }
     
     [sortedArray release];
+}
+
+- (void)testNSStringAllocation
+{
+    NSString *fullName = [self fullname];
+    NSLog(@"My name is %@", fullName);
+    dispatch_async(dispatch_get_main_queue(), ^{
+        NSLog(@"My name is %@", fullName);
+    });
+    NSLog(@"pop stack.");
+}
+
+- (NSString*)fullname
+{
+    return [NSString stringWithFormat:@"Pedro Ontiveros."];
+//    return [[[NSString alloc] initWithString:@"Pedro Ontiveros."] autorelease]; // what happen if I remove autorelease keyword ?
 }
 
 /*

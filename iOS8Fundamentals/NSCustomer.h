@@ -10,4 +10,8 @@
 
 @interface NSCustomer : NSEntity
 
+@property (nonatomic, retain)NSMutableArray *items;
+
+- (id)initWithIdentification:(NSNumber *)identification andName:(NSString *)name;
+
 @end

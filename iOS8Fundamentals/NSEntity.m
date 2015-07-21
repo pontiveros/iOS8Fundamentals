@@ -39,4 +39,9 @@
     return [self.name compare:entity.name];
 }
 
+- (id)copyWithZone:(NSZone *)zone
+{
+    return [[NSEntity alloc] initWithIdentification:self.identification andName:self.name];
+}
+
 @end

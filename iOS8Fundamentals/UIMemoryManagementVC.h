@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface UIMemoryManagementVC : UIViewController
+{
+    IBOutlet UIView *viewChild1;
+}
 
 @end
