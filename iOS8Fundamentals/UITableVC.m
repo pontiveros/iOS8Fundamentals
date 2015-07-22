@@ -65,10 +65,12 @@
 
 - (void)downloadItems
 {
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://jsonplaceholder.typicode.com/photos"]];
     [NSURLConnection sendAsynchronousRequest:request
                                        queue:[[NSOperationQueue alloc] init]
                            completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
+                               
                                if (!error) {
                                    id json = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
                                    NSArray *dict = (NSArray*)json;
@@ -80,10 +82,12 @@
                                    
                                    dispatch_async(dispatch_get_main_queue(), ^{
                                         [self.tableView reloadData];
+                                        [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
                                    });
                                    
                                } else {
                                    NSLog(@"ERROR: %@", [error description]);
+                                   [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
                                }
                            }];
 }
