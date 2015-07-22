@@ -123,8 +123,8 @@
     NSArray *arr = [[NSArray alloc] initWithObjects:p1, p2, p3, p1, nil];
     NSSet   *set = [[NSSet alloc] initWithObjects:p1, p2, p3, p1, nil];
     
-    NSLog(@"NSArray count: %ld", [arr count]);
-    NSLog(@"NSSet count: %ld", [set count]);
+    NSLog(@"NSArray count: %ld", (unsigned long)[arr count]);
+    NSLog(@"NSSet count: %ld", (unsigned long)[set count]);
     
     for (NSString *item in arr) {
         NSLog(@"%@", item);
@@ -148,18 +148,18 @@
     NSString *person3 = @"person 3";
     
     arr = [NSArray arrayWithObjects:person1, person2, person3, nil];
-    NSLog(@"NSArray factory: %ld", arr.count);
+    NSLog(@"NSArray factory: %ld", (unsigned long)arr.count);
     
-    // [arr release]; // Why I don't have to do this ?
+    // [arr release]; // Why I don't have to do this ? : because you're not the owner of this array.
     // Please explain it!
     
-    NSLog(@"Array factory retain count: %ld", [arr retainCount]);
+    NSLog(@"Array factory retain count: %ld", (unsigned long)[arr retainCount]);
     
     dispatch_queue_t serialQueue1 = dispatch_queue_create("com.qbxsoft.mobile1", DISPATCH_QUEUE_SERIAL);
 
     dispatch_async(serialQueue1, ^{
         NSLog(@"Here we go ...");
-        NSLog(@"Array factory retain count: %ld", [arr retainCount]);
+        NSLog(@"Array factory retain count: %ld", (unsigned long)[arr retainCount]);
     });
 }
 
@@ -179,17 +179,17 @@
     [arr1 addObject:str2]; // increment retainCount str2
     [arr1 addObject:str3]; // increment retainCount str3
     
-    NSLog(@"str1 retainCount: %ld", [str1 retainCount]); // ?
-    NSLog(@"str2 retainCount: %ld", [str2 retainCount]); // ?
-    NSLog(@"str3 retainCount: %ld", [str3 retainCount]); // ?
+    NSLog(@"str1 retainCount: %ld", (unsigned long)[str1 retainCount]); // ?
+    NSLog(@"str2 retainCount: %ld", (unsigned long)[str2 retainCount]); // ?
+    NSLog(@"str3 retainCount: %ld", (unsigned long)[str3 retainCount]); // ?
     
     [str1 release];
     [str2 release];
     [str3 release];
     
-    NSLog(@"str1 retainCount: %ld", [str1 retainCount]);
-    NSLog(@"str2 retainCount: %ld", [str2 retainCount]);
-    NSLog(@"str3 retainCount: %ld", [str3 retainCount]);
+    NSLog(@"str1 retainCount: %ld", (unsigned long)[str1 retainCount]);
+    NSLog(@"str2 retainCount: %ld", (unsigned long)[str2 retainCount]);
+    NSLog(@"str3 retainCount: %ld", (unsigned long)[str3 retainCount]);
     
     [arr1 removeAllObjects];
     [arr1 release];
@@ -207,8 +207,8 @@
     [arr1 addObject:arr2];
     [arr2 addObject:arr1];
     
-    NSLog(@"arr1 retainCount: %ld", [arr1 retainCount]); // retain count ?
-    NSLog(@"arr2 retainCount: %ld", [arr2 retainCount]); // retain count ?
+    NSLog(@"arr1 retainCount: %ld", (unsigned long)[arr1 retainCount]); // retain count ?
+    NSLog(@"arr2 retainCount: %ld", (unsigned long)[arr2 retainCount]); // retain count ?
     
     [arr1 release];
     [arr2 release];
@@ -243,8 +243,8 @@
     NSArray *sortArray = [array sortedArrayUsingDescriptors:[NSArray arrayWithObjects:descriptor, nil]]; // This method creates a copy of array.
     [self printNumbers:sortArray];
     
-    NSLog(@"array retain count: %ld", [array retainCount]);
-    NSLog(@"sortArray retain count: %ld", [sortArray retainCount]);
+    NSLog(@"array retain count: %ld", (long)[array retainCount]);
+    NSLog(@"sortArray retain count: %ld", (long)[sortArray retainCount]);
 }
 
 - (void)sortNSMutableArrayBySelector:(NSArray*)array

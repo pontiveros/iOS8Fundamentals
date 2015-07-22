@@ -13,6 +13,7 @@
 #import "NetworkingVC.h"
 #import "CameraVC.h"
 #import "UIMemoryManagementVC.h"
+#import "UITableVC.h"
 
 
 @interface RootViewController ()
@@ -100,6 +101,12 @@
 - (void)openCamera
 {
     CameraVC *vc = [[CameraVC alloc] initWithNibName:@"CameraView" bundle:nil];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (void)openTableVC
+{
+    UITableVC * vc = [[UITableVC alloc] initWithStyle:UITableViewStylePlain];
     [self.navigationController pushViewController:vc animated:YES];
 }
 
