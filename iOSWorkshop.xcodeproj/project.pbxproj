@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		1C0B965F1B0677A300E43B62 /* RegionMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C0B965E1B0677A300E43B62 /* RegionMonitor.m */; };
+		1C0DE7E61B627CA3002431C6 /* motorcycle.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C0DE7E51B627CA3002431C6 /* motorcycle.png */; };
+		1C0DE7EA1B6292A9002431C6 /* UIAlgorithmsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C0DE7E91B6292A9002431C6 /* UIAlgorithmsVC.m */; };
+		1C0DE7EE1B629708002431C6 /* UIAlgorithmsDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C0DE7ED1B629708002431C6 /* UIAlgorithmsDetailVC.m */; };
+		1C0DE7F01B62974B002431C6 /* UIAlgorithmsDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C0DE7EF1B62974B002431C6 /* UIAlgorithmsDetailView.xib */; };
 		1C153F8C1B039D5200187EB7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C153F8B1B039D5200187EB7 /* main.m */; };
 		1C153F8F1B039D5200187EB7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C153F8E1B039D5200187EB7 /* AppDelegate.m */; };
 		1C153F921B039D5200187EB7 /* iOSWorkshop.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1C153F901B039D5200187EB7 /* iOSWorkshop.xcdatamodeld */; };
@@ -53,6 +57,12 @@
 /* Begin PBXFileReference section */
 		1C0B965D1B0677A300E43B62 /* RegionMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegionMonitor.h; sourceTree = "<group>"; };
 		1C0B965E1B0677A300E43B62 /* RegionMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegionMonitor.m; sourceTree = "<group>"; };
+		1C0DE7E51B627CA3002431C6 /* motorcycle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = motorcycle.png; sourceTree = "<group>"; };
+		1C0DE7E81B6292A9002431C6 /* UIAlgorithmsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIAlgorithmsVC.h; sourceTree = "<group>"; };
+		1C0DE7E91B6292A9002431C6 /* UIAlgorithmsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIAlgorithmsVC.m; sourceTree = "<group>"; };
+		1C0DE7EC1B629708002431C6 /* UIAlgorithmsDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIAlgorithmsDetailVC.h; sourceTree = "<group>"; };
+		1C0DE7ED1B629708002431C6 /* UIAlgorithmsDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIAlgorithmsDetailVC.m; sourceTree = "<group>"; };
+		1C0DE7EF1B62974B002431C6 /* UIAlgorithmsDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UIAlgorithmsDetailView.xib; sourceTree = "<group>"; };
 		1C153F861B039D5200187EB7 /* iOSWorkshop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSWorkshop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C153F8A1B039D5200187EB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1C153F8B1B039D5200187EB7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -120,6 +130,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1C0DE7E71B62927B002431C6 /* UITableViewSample */ = {
+			isa = PBXGroup;
+			children = (
+				1C31B77D1B5F4356007F9DF1 /* UITableVC.h */,
+				1C31B77E1B5F4356007F9DF1 /* UITableVC.m */,
+			);
+			name = UITableViewSample;
+			sourceTree = "<group>";
+		};
+		1C0DE7EB1B6292B2002431C6 /* Algoritms */ = {
+			isa = PBXGroup;
+			children = (
+				1C0DE7E81B6292A9002431C6 /* UIAlgorithmsVC.h */,
+				1C0DE7E91B6292A9002431C6 /* UIAlgorithmsVC.m */,
+				1C0DE7EC1B629708002431C6 /* UIAlgorithmsDetailVC.h */,
+				1C0DE7ED1B629708002431C6 /* UIAlgorithmsDetailVC.m */,
+				1C0DE7EF1B62974B002431C6 /* UIAlgorithmsDetailView.xib */,
+			);
+			name = Algoritms;
+			sourceTree = "<group>";
+		};
 		1C153F7D1B039D5200187EB7 = {
 			isa = PBXGroup;
 			children = (
@@ -142,10 +173,10 @@
 		1C153F881B039D5200187EB7 /* iOSWorkshop */ = {
 			isa = PBXGroup;
 			children = (
+				1C0DE7EB1B6292B2002431C6 /* Algoritms */,
+				1C0DE7E71B62927B002431C6 /* UITableViewSample */,
 				1C325AD41B541B2500AE613F /* DummyClasses */,
 				1C8D2D2B1B308DFC0094ED97 /* Services */,
-				1C0B965D1B0677A300E43B62 /* RegionMonitor.h */,
-				1C0B965E1B0677A300E43B62 /* RegionMonitor.m */,
 				1C4992091B2CE9A00011048B /* Networking */,
 				1C168F241B1BED20003957BD /* ThreadPrograming */,
 				1C153F8D1B039D5200187EB7 /* AppDelegate.h */,
@@ -164,11 +195,10 @@
 				1CECEF1D1B2FAFCC00A1CA73 /* CameraVC.h */,
 				1CECEF1E1B2FAFCC00A1CA73 /* CameraVC.m */,
 				1CECEF211B2FB06800A1CA73 /* CameraView.xib */,
-				1C31B77D1B5F4356007F9DF1 /* UITableVC.h */,
-				1C31B77E1B5F4356007F9DF1 /* UITableVC.m */,
 				1C153F991B039D5200187EB7 /* Images.xcassets */,
 				1C153F9B1B039D5200187EB7 /* LaunchScreen.xib */,
 				1C153F901B039D5200187EB7 /* iOSWorkshop.xcdatamodeld */,
+				1C0DE7E51B627CA3002431C6 /* motorcycle.png */,
 				1C153F891B039D5200187EB7 /* Supporting Files */,
 			);
 			name = iOSWorkshop;
@@ -251,6 +281,8 @@
 		1C8D2D2B1B308DFC0094ED97 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				1C0B965D1B0677A300E43B62 /* RegionMonitor.h */,
+				1C0B965E1B0677A300E43B62 /* RegionMonitor.m */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -345,10 +377,12 @@
 				1CA75F971B1C8F9000ACDCB7 /* NSThreadView.xib in Resources */,
 				1C168F291B1BED91003957BD /* GrandCentralDispatchView.xib in Resources */,
 				1CECEF221B2FB06800A1CA73 /* CameraView.xib in Resources */,
+				1C0DE7E61B627CA3002431C6 /* motorcycle.png in Resources */,
 				1C168F231B1A50A7003957BD /* MultiThreadView.xib in Resources */,
 				1C153F981B039D5200187EB7 /* Main.storyboard in Resources */,
 				1C153F9D1B039D5200187EB7 /* LaunchScreen.xib in Resources */,
 				1C49920E1B2CEA1C0011048B /* NetworkingView.xib in Resources */,
+				1C0DE7F01B62974B002431C6 /* UIAlgorithmsDetailView.xib in Resources */,
 				1C325AD21B54061300AE613F /* UIMemoryManagementView.xib in Resources */,
 				1C153F9A1B039D5200187EB7 /* Images.xcassets in Resources */,
 			);
@@ -373,6 +407,7 @@
 				1CA75F951B1C8F5C00ACDCB7 /* NSThreadVC.m in Sources */,
 				1C153F8F1B039D5200187EB7 /* AppDelegate.m in Sources */,
 				1C153F921B039D5200187EB7 /* iOSWorkshop.xcdatamodeld in Sources */,
+				1C0DE7EA1B6292A9002431C6 /* UIAlgorithmsVC.m in Sources */,
 				1C5653BB1B03C9D600BBE07D /* IBeaconViewController.m in Sources */,
 				1C31B77F1B5F4356007F9DF1 /* UITableVC.m in Sources */,
 				1C168F271B1BED4D003957BD /* GrandCentralDispatchVC.m in Sources */,
@@ -383,6 +418,7 @@
 				1CECEF1F1B2FAFCC00A1CA73 /* CameraVC.m in Sources */,
 				1C0B965F1B0677A300E43B62 /* RegionMonitor.m in Sources */,
 				1C49920C1B2CE9F60011048B /* NetworkingVC.m in Sources */,
+				1C0DE7EE1B629708002431C6 /* UIAlgorithmsDetailVC.m in Sources */,
 				1C168F211B1A5080003957BD /* MultiThreadVC.m in Sources */,
 				1C153F8C1B039D5200187EB7 /* main.m in Sources */,
 			);

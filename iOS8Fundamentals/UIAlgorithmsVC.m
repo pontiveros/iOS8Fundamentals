@@ -1,36 +1,30 @@
 //
-//  UITableVC.m
+//  UIAlgorithms.m
 //  iOSWorkshop
 //
-//  Created by Pedro Ontiveros on 7/22/15.
+//  Created by Pedro Ontiveros on 7/24/15.
 //  Copyright (c) 2015 Pedro Ontiveros. All rights reserved.
 //
 
-#import "UITableVC.h"
+#import "UIAlgorithmsVC.h"
+#import "UIAlgorithmsDetailVC.h"
 
-@interface UITableVC ()
+@interface UIAlgorithmsVC ()
 
 @end
 
-@implementation UITableVC
+@implementation UIAlgorithmsVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"Algorithms";
+    self.items = @{@"Sort NSString":@"openSortString", @"Binary Search":@"openBinarySearch"};
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    self.title = @"Table VC";
-    self.items = [[NSMutableArray alloc] init];
-//    for (int i = 0; i < 1000; i++) {
-//        [self.items addObject:[NSString stringWithFormat:@"Item order %d", (i + 1)]];
-//    }
-    
-    [self downloadItems];
-    
-// self.items = @[@"Item 1", @"Item 2", @"Item 3", @"Item 4", @"Item 5", @"Item 6", @"Item 7", @"Item 8"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -52,49 +46,30 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *identifier = @"myCell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    static NSString *defaultCell = @"defaulCell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:defaultCell];
+    
     if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:defaultCell];
     }
     
-    NSDictionary *item = self.items[indexPath.row];
-    cell.textLabel.text = [item objectForKey:@"url"];
-    
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [cell.imageView setImage:[UIImage imageNamed:@"motorcycle"]];
-    });
+    [cell.textLabel setText:[[self.items allKeys] objectAtIndex:indexPath.row]];
     
     return cell;
 }
 
-- (void)downloadItems
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
-    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://jsonplaceholder.typicode.com/photos"]];
-    [NSURLConnection sendAsynchronousRequest:request
-                                       queue:[[NSOperationQueue alloc] init]
-                           completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
-                               
-                               if (!error) {
-                                   id json = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
-                                   NSArray *dict = (NSArray*)json;
-                                   
-                                   for (NSDictionary *item in dict) {
-                                       [self.items addObject:item];
-                                       NSLog(@"%@", item);
-                                   }
-                                   
-                                   dispatch_async(dispatch_get_main_queue(), ^{
-                                        [self.tableView reloadData];
-                                        [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
-                                   });
-                                   
-                               } else {
-                                   NSLog(@"ERROR: %@", [error description]);
-                                   [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
-                               }
-                           }];
+    UIAlgorithmsDetailVC *vc = [[UIAlgorithmsDetailVC alloc] initWithNibName:@"UIAlgorithmsDetailView" bundle:nil];
+    vc.title = @"Detail";
+    vc.type  = UIDETAIL_TYPE_A;
+    
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (void)open
+{
+    
 }
 
 /*

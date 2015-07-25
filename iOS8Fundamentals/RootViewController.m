@@ -14,6 +14,7 @@
 #import "CameraVC.h"
 #import "UIMemoryManagementVC.h"
 #import "UITableVC.h"
+#import "UIAlgorithmsVC.h"
 
 
 @interface RootViewController ()
@@ -27,7 +28,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    self.title = @"iOS8Fundamentals";
+    self.title = @"iOSFundamentals";
     items = [[NSMutableDictionary alloc] init];
     [self fillRootTable];
 }
@@ -47,6 +48,7 @@
     [fundamentals setObject:@"openMemoryManagement" forKey:@"Memory Management"];
     [fundamentals setObject:@"openFilesAndNetworking" forKey:@"Files and Networking"];
     [fundamentals setObject:@"openWorkingViews" forKey:@"Working with views"];
+    [fundamentals setObject:@"openAlgorithms" forKey:@"Working with algoritms"];
     [items setObject:fundamentals forKey:@"Fundamentals"];
     
     NSMutableDictionary *advanced = [[NSMutableDictionary alloc] init];
@@ -113,6 +115,12 @@
 - (void)openMemoryManagement
 {
     UIMemoryManagementVC *vc = [[UIMemoryManagementVC alloc] initWithNibName:@"UIMemoryManagementView" bundle:nil];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (void)openAlgorithms
+{
+    UIAlgorithmsVC *vc = [[UIAlgorithmsVC alloc] initWithStyle:UITableViewStylePlain];
     [self.navigationController pushViewController:vc animated:YES];
 }
 
