@@ -61,8 +61,14 @@
     NSDictionary *item = self.items[indexPath.row];
     cell.textLabel.text = [item objectForKey:@"url"];
     
+    __weak UITableVC *pSelf = self;
+    
     dispatch_async(dispatch_get_main_queue(), ^{
-        [cell.imageView setImage:[UIImage imageNamed:@"motorcycle"]];
+        NSDictionary *dict = [pSelf.items objectAtIndex:indexPath.row];
+        NSString *url = [dict objectForKey:@"url"];
+        UIImage  *img = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:url]]];
+        [cell.imageView setImage:img];
+        [pSelf.tableView reloadData];
     });
     
     return cell;
