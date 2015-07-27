@@ -14,6 +14,7 @@
 
 - (NSComparisonResult)compareCustom:(NSString*)value;
 - (NSComparisonResult)compareByLength:(NSString*)value;
+
 @end
 
 @implementation NSString (CustomComparator)
@@ -44,15 +45,16 @@
             NSArray *tmp = @[@"New York", @"Boston", @"Chicago", @"Washington", @"San Antonio", @"Austin", @"Los Angeles", @"San Francisco", @"Miami", @"Jacksonville", @"Detroit", @"Indiana", @"Houston", @"Las Vegas", @"San Diego", @"Orlando", @"Cupertino", @"Seattle", @"Redmond", @"Denver", @"Atlanta"];
             
             self.items   = [tmp sortedArrayUsingSelector:@selector(compareByLength:)];
-            self.options = @[@"By Length", @"Alphabetical", @"Alphabetical Reverse"];
         } break;
         case UIDETAIL_TYPE_B: {
-            
+            NSLog(@"Type B needs to be implemented.");
         } break;
         default: {
-            
+            NSLog(@"There is no default option :(.");
         }
     }
+    
+    self.options = @[@"By Length", @"Alphabetical", @"Alphabetical Reverse"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -62,11 +64,15 @@
 
 - (void)updateTableView
 {
-    switch (self.sortBy) {
-        case SORT_BY_ALPHABETICAL:         self.items = [self.items sortedArrayUsingSelector:@selector(compare:)];       break;
-        case SORT_BY_ALPHABETICAL_REVERSE: self.items = [self.items sortedArrayUsingSelector:@selector(compareCustom:)]; break;
-        case SORT_BY_INDEX:
-        default: self.items = [self.items sortedArrayUsingSelector:@selector(compareByLength:)]; break;
+    if (self.type == UIDETAIL_TYPE_A) {
+        switch (self.sortBy) {
+            case SORT_BY_ALPHABETICAL:         self.items = [self.items sortedArrayUsingSelector:@selector(compare:)];       break;
+            case SORT_BY_ALPHABETICAL_REVERSE: self.items = [self.items sortedArrayUsingSelector:@selector(compareCustom:)]; break;
+            case SORT_BY_INDEX:
+            default: self.items = [self.items sortedArrayUsingSelector:@selector(compareByLength:)]; break;
+        }
+    } else {
+        NSLog(@"Type B has not been implemented.");
     }
     
     dispatch_async(dispatch_get_main_queue(), ^{
