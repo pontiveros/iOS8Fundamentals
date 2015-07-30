@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C0A10BC1B69249F0087F017 /* UIBarCodeReaderVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C0A10BB1B69249F0087F017 /* UIBarCodeReaderVC.m */; };
+		1C0A10BE1B6924D70087F017 /* UIBarCodeReaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C0A10BD1B6924D70087F017 /* UIBarCodeReaderView.xib */; };
+		1C0A10C01B6926C30087F017 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C0A10BF1B6926C30087F017 /* AVFoundation.framework */; };
 		1C0B965F1B0677A300E43B62 /* RegionMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C0B965E1B0677A300E43B62 /* RegionMonitor.m */; };
 		1C0DE7E61B627CA3002431C6 /* motorcycle.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C0DE7E51B627CA3002431C6 /* motorcycle.png */; };
 		1C0DE7EA1B6292A9002431C6 /* UIAlgorithmsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C0DE7E91B6292A9002431C6 /* UIAlgorithmsVC.m */; };
@@ -42,6 +45,7 @@
 		1CECEF201B2FAFCC00A1CA73 /* CameraVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CECEF1E1B2FAFCC00A1CA73 /* CameraVC.m */; };
 		1CECEF221B2FB06800A1CA73 /* CameraView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1CECEF211B2FB06800A1CA73 /* CameraView.xib */; };
 		1CECEF231B2FB06800A1CA73 /* CameraView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1CECEF211B2FB06800A1CA73 /* CameraView.xib */; };
+		9CC41ED42757CCFE71C7B8A9 /* libPods-iOSWorkshop.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 227A510CDD7994D345382268 /* libPods-iOSWorkshop.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +59,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1C0A10BA1B69249F0087F017 /* UIBarCodeReaderVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIBarCodeReaderVC.h; sourceTree = "<group>"; };
+		1C0A10BB1B69249F0087F017 /* UIBarCodeReaderVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIBarCodeReaderVC.m; sourceTree = "<group>"; };
+		1C0A10BD1B6924D70087F017 /* UIBarCodeReaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UIBarCodeReaderView.xib; sourceTree = "<group>"; };
+		1C0A10BF1B6926C30087F017 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		1C0B965D1B0677A300E43B62 /* RegionMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegionMonitor.h; sourceTree = "<group>"; };
 		1C0B965E1B0677A300E43B62 /* RegionMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegionMonitor.m; sourceTree = "<group>"; };
 		1C0DE7E51B627CA3002431C6 /* motorcycle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = motorcycle.png; sourceTree = "<group>"; };
@@ -108,6 +116,9 @@
 		1CECEF1D1B2FAFCC00A1CA73 /* CameraVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraVC.h; sourceTree = "<group>"; };
 		1CECEF1E1B2FAFCC00A1CA73 /* CameraVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraVC.m; sourceTree = "<group>"; };
 		1CECEF211B2FB06800A1CA73 /* CameraView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CameraView.xib; sourceTree = "<group>"; };
+		227A510CDD7994D345382268 /* libPods-iOSWorkshop.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iOSWorkshop.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B48CA3DAA4FC4D640727AF0 /* Pods-iOSWorkshop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSWorkshop.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOSWorkshop/Pods-iOSWorkshop.debug.xcconfig"; sourceTree = "<group>"; };
+		BD595745FCD37AB5FFF56DE9 /* Pods-iOSWorkshop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSWorkshop.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOSWorkshop/Pods-iOSWorkshop.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,8 +126,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C0A10C01B6926C30087F017 /* AVFoundation.framework in Frameworks */,
 				1C5653C01B04B6EB00BBE07D /* CoreBluetooth.framework in Frameworks */,
 				1C5653BD1B03CCD400BBE07D /* CoreLocation.framework in Frameworks */,
+				9CC41ED42757CCFE71C7B8A9 /* libPods-iOSWorkshop.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -158,6 +171,7 @@
 				1C153FA51B039D5200187EB7 /* iOSWorkshopTests */,
 				1C5653BE1B03CCDB00BBE07D /* Frameworks */,
 				1C153F871B039D5200187EB7 /* Products */,
+				ABFBE7DAE462414E554ADA63 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -179,6 +193,9 @@
 				1C8D2D2B1B308DFC0094ED97 /* Services */,
 				1C4992091B2CE9A00011048B /* Networking */,
 				1C168F241B1BED20003957BD /* ThreadPrograming */,
+				1C0A10BA1B69249F0087F017 /* UIBarCodeReaderVC.h */,
+				1C0A10BB1B69249F0087F017 /* UIBarCodeReaderVC.m */,
+				1C0A10BD1B6924D70087F017 /* UIBarCodeReaderView.xib */,
 				1C153F8D1B039D5200187EB7 /* AppDelegate.h */,
 				1C153F8E1B039D5200187EB7 /* AppDelegate.m */,
 				1C153F931B039D5200187EB7 /* RootViewController.h */,
@@ -272,8 +289,10 @@
 		1C5653BE1B03CCDB00BBE07D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1C0A10BF1B6926C30087F017 /* AVFoundation.framework */,
 				1C5653BF1B04B6EB00BBE07D /* CoreBluetooth.framework */,
 				1C5653BC1B03CCD400BBE07D /* CoreLocation.framework */,
+				227A510CDD7994D345382268 /* libPods-iOSWorkshop.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -287,6 +306,15 @@
 			name = Services;
 			sourceTree = "<group>";
 		};
+		ABFBE7DAE462414E554ADA63 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3B48CA3DAA4FC4D640727AF0 /* Pods-iOSWorkshop.debug.xcconfig */,
+				BD595745FCD37AB5FFF56DE9 /* Pods-iOSWorkshop.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -294,9 +322,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1C153FAC1B039D5200187EB7 /* Build configuration list for PBXNativeTarget "iOSWorkshop" */;
 			buildPhases = (
+				D69577548EF2D5290C352635 /* Check Pods Manifest.lock */,
 				1C153F821B039D5200187EB7 /* Sources */,
 				1C153F831B039D5200187EB7 /* Frameworks */,
 				1C153F841B039D5200187EB7 /* Resources */,
+				011F9AAEE6D3B51D328F326D /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -385,6 +415,7 @@
 				1C0DE7F01B62974B002431C6 /* UIAlgorithmsDetailView.xib in Resources */,
 				1C325AD21B54061300AE613F /* UIMemoryManagementView.xib in Resources */,
 				1C153F9A1B039D5200187EB7 /* Images.xcassets in Resources */,
+				1C0A10BE1B6924D70087F017 /* UIBarCodeReaderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,6 +428,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		011F9AAEE6D3B51D328F326D /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iOSWorkshop/Pods-iOSWorkshop-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D69577548EF2D5290C352635 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1C153F821B039D5200187EB7 /* Sources */ = {
@@ -419,6 +483,7 @@
 				1C0B965F1B0677A300E43B62 /* RegionMonitor.m in Sources */,
 				1C49920C1B2CE9F60011048B /* NetworkingVC.m in Sources */,
 				1C0DE7EE1B629708002431C6 /* UIAlgorithmsDetailVC.m in Sources */,
+				1C0A10BC1B69249F0087F017 /* UIBarCodeReaderVC.m in Sources */,
 				1C168F211B1A5080003957BD /* MultiThreadVC.m in Sources */,
 				1C153F8C1B039D5200187EB7 /* main.m in Sources */,
 			);
@@ -547,6 +612,7 @@
 		};
 		1C153FAD1B039D5200187EB7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3B48CA3DAA4FC4D640727AF0 /* Pods-iOSWorkshop.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -555,12 +621,13 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = iOSWorkshop;
-				PROVISIONING_PROFILE = "3562877d-a2bf-42ba-a7c5-8948e461d66e";
+				PROVISIONING_PROFILE = "848cf9f9-56d7-494d-812f-0469b93f1e8e";
 			};
 			name = Debug;
 		};
 		1C153FAE1B039D5200187EB7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BD595745FCD37AB5FFF56DE9 /* Pods-iOSWorkshop.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -569,7 +636,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = iOSWorkshop;
-				PROVISIONING_PROFILE = "3562877d-a2bf-42ba-a7c5-8948e461d66e";
+				PROVISIONING_PROFILE = "848cf9f9-56d7-494d-812f-0469b93f1e8e";
 			};
 			name = Release;
 		};

@@ -15,6 +15,7 @@
 #import "UIMemoryManagementVC.h"
 #import "UITableVC.h"
 #import "UIAlgorithmsVC.h"
+#import "UIBarCodeReaderVC.h"
 
 
 @interface RootViewController ()
@@ -58,6 +59,7 @@
     [advanced setObject:@"openGravityCollisionVC" forKey:@"Gravity And Collission"];
     [advanced setObject:@"openQuartzModule" forKey:@"Quartz"];
     [advanced setObject:@"openBeaconVC" forKey:@"iBeacon"];
+    [advanced setObject:@"openScannReader" forKey:@"Scann Reader"];
     [items setObject:advanced forKey:@"Advanced"];
     
     /*
@@ -121,6 +123,12 @@
 - (void)openAlgorithms
 {
     UIAlgorithmsVC *vc = [[UIAlgorithmsVC alloc] initWithStyle:UITableViewStylePlain];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (void)openScannReader
+{
+    UIBarCodeReaderVC *vc = [[UIBarCodeReaderVC alloc] initWithNibName:@"UIBarCodeReaderView" bundle:nil];
     [self.navigationController pushViewController:vc animated:YES];
 }
 
