@@ -71,7 +71,7 @@
     reader.readerDelegate = self;
     reader.supportedOrientationsMask = ZBarOrientationMaskAll;
     
-    ZBarImageScanner *scanner = reader.scanner;
+//    ZBarImageScanner *scanner = reader.scanner;
     // TODO: (optional) additional reader configuration here
     
     // EXAMPLE: disable rarely used I2/5 to improve performance
