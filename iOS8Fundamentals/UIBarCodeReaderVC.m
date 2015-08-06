@@ -7,7 +7,7 @@
 //
 
 #import "UIBarCodeReaderVC.h"
-
+#include <dlfcn.h>
 
 @interface UIBarCodeReaderVC ()
 
@@ -80,6 +80,11 @@
 //                       to:0];
     
     [self presentViewController:reader animated:YES completion:nil];
+}
+
+- (IBAction)onTouchLockScreen:(id)sender
+{
+    NSLog(@"Tap on Lock Screen!!!");
 }
 
 #pragma mark - AVCaptureDataOutputObjectDelegate

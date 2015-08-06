@@ -27,7 +27,6 @@
 		1C168F231B1A50A7003957BD /* MultiThreadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C168F221B1A50A7003957BD /* MultiThreadView.xib */; };
 		1C168F271B1BED4D003957BD /* GrandCentralDispatchVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C168F261B1BED4D003957BD /* GrandCentralDispatchVC.m */; };
 		1C168F291B1BED91003957BD /* GrandCentralDispatchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C168F281B1BED91003957BD /* GrandCentralDispatchView.xib */; };
-		1C31B77F1B5F4356007F9DF1 /* UITableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C31B77E1B5F4356007F9DF1 /* UITableVC.m */; };
 		1C325AD01B5405E400AE613F /* UIMemoryManagementVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C325ACF1B5405E400AE613F /* UIMemoryManagementVC.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		1C325AD21B54061300AE613F /* UIMemoryManagementView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C325AD11B54061300AE613F /* UIMemoryManagementView.xib */; };
 		1C325AD71B541B5800AE613F /* NSEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C325AD61B541B5800AE613F /* NSEntity.m */; };
@@ -40,6 +39,9 @@
 		1C5653C01B04B6EB00BBE07D /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C5653BF1B04B6EB00BBE07D /* CoreBluetooth.framework */; };
 		1CA75F951B1C8F5C00ACDCB7 /* NSThreadVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA75F941B1C8F5C00ACDCB7 /* NSThreadVC.m */; };
 		1CA75F971B1C8F9000ACDCB7 /* NSThreadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1CA75F961B1C8F9000ACDCB7 /* NSThreadView.xib */; };
+		1CC320BD1B710AC6008B567B /* UITableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CC320BC1B710AC6008B567B /* UITableVC.m */; };
+		1CC320C01B72818C008B567B /* NSOperationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CC320BF1B72818C008B567B /* NSOperationVC.m */; };
+		1CC320C21B72819E008B567B /* NSOperationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1CC320C11B72819E008B567B /* NSOperationView.xib */; };
 		1CC9CCA21B041EF6001EB21A /* UIWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CC9CCA11B041EF6001EB21A /* UIWebViewController.m */; };
 		1CECEF1F1B2FAFCC00A1CA73 /* CameraVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CECEF1E1B2FAFCC00A1CA73 /* CameraVC.m */; };
 		1CECEF201B2FAFCC00A1CA73 /* CameraVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CECEF1E1B2FAFCC00A1CA73 /* CameraVC.m */; };
@@ -92,7 +94,6 @@
 		1C168F261B1BED4D003957BD /* GrandCentralDispatchVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GrandCentralDispatchVC.m; sourceTree = "<group>"; };
 		1C168F281B1BED91003957BD /* GrandCentralDispatchView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GrandCentralDispatchView.xib; sourceTree = "<group>"; };
 		1C31B77D1B5F4356007F9DF1 /* UITableVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITableVC.h; sourceTree = "<group>"; };
-		1C31B77E1B5F4356007F9DF1 /* UITableVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITableVC.m; sourceTree = "<group>"; };
 		1C325ACE1B5405E400AE613F /* UIMemoryManagementVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIMemoryManagementVC.h; sourceTree = "<group>"; };
 		1C325ACF1B5405E400AE613F /* UIMemoryManagementVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIMemoryManagementVC.m; sourceTree = "<group>"; };
 		1C325AD11B54061300AE613F /* UIMemoryManagementView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UIMemoryManagementView.xib; sourceTree = "<group>"; };
@@ -111,6 +112,10 @@
 		1CA75F931B1C8F5C00ACDCB7 /* NSThreadVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSThreadVC.h; sourceTree = "<group>"; };
 		1CA75F941B1C8F5C00ACDCB7 /* NSThreadVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSThreadVC.m; sourceTree = "<group>"; };
 		1CA75F961B1C8F9000ACDCB7 /* NSThreadView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NSThreadView.xib; sourceTree = "<group>"; };
+		1CC320BC1B710AC6008B567B /* UITableVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITableVC.m; sourceTree = "<group>"; };
+		1CC320BE1B72818C008B567B /* NSOperationVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSOperationVC.h; sourceTree = "<group>"; };
+		1CC320BF1B72818C008B567B /* NSOperationVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSOperationVC.m; sourceTree = "<group>"; };
+		1CC320C11B72819E008B567B /* NSOperationView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NSOperationView.xib; sourceTree = "<group>"; };
 		1CC9CCA01B041EF6001EB21A /* UIWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIWebViewController.h; sourceTree = "<group>"; };
 		1CC9CCA11B041EF6001EB21A /* UIWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIWebViewController.m; sourceTree = "<group>"; };
 		1CECEF1D1B2FAFCC00A1CA73 /* CameraVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraVC.h; sourceTree = "<group>"; };
@@ -147,7 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				1C31B77D1B5F4356007F9DF1 /* UITableVC.h */,
-				1C31B77E1B5F4356007F9DF1 /* UITableVC.m */,
+				1CC320BC1B710AC6008B567B /* UITableVC.m */,
 			);
 			name = UITableViewSample;
 			sourceTree = "<group>";
@@ -261,6 +266,9 @@
 				1CA75F931B1C8F5C00ACDCB7 /* NSThreadVC.h */,
 				1CA75F941B1C8F5C00ACDCB7 /* NSThreadVC.m */,
 				1CA75F961B1C8F9000ACDCB7 /* NSThreadView.xib */,
+				1CC320BE1B72818C008B567B /* NSOperationVC.h */,
+				1CC320BF1B72818C008B567B /* NSOperationVC.m */,
+				1CC320C11B72819E008B567B /* NSOperationView.xib */,
 			);
 			name = ThreadPrograming;
 			sourceTree = "<group>";
@@ -414,6 +422,7 @@
 				1C49920E1B2CEA1C0011048B /* NetworkingView.xib in Resources */,
 				1C0DE7F01B62974B002431C6 /* UIAlgorithmsDetailView.xib in Resources */,
 				1C325AD21B54061300AE613F /* UIMemoryManagementView.xib in Resources */,
+				1CC320C21B72819E008B567B /* NSOperationView.xib in Resources */,
 				1C153F9A1B039D5200187EB7 /* Images.xcassets in Resources */,
 				1C0A10BE1B6924D70087F017 /* UIBarCodeReaderView.xib in Resources */,
 			);
@@ -473,13 +482,14 @@
 				1C153F921B039D5200187EB7 /* iOSWorkshop.xcdatamodeld in Sources */,
 				1C0DE7EA1B6292A9002431C6 /* UIAlgorithmsVC.m in Sources */,
 				1C5653BB1B03C9D600BBE07D /* IBeaconViewController.m in Sources */,
-				1C31B77F1B5F4356007F9DF1 /* UITableVC.m in Sources */,
 				1C168F271B1BED4D003957BD /* GrandCentralDispatchVC.m in Sources */,
 				1CC9CCA21B041EF6001EB21A /* UIWebViewController.m in Sources */,
 				1C325AD01B5405E400AE613F /* UIMemoryManagementVC.m in Sources */,
 				1C325AD71B541B5800AE613F /* NSEntity.m in Sources */,
 				1C153F951B039D5200187EB7 /* RootViewController.m in Sources */,
 				1CECEF1F1B2FAFCC00A1CA73 /* CameraVC.m in Sources */,
+				1CC320BD1B710AC6008B567B /* UITableVC.m in Sources */,
+				1CC320C01B72818C008B567B /* NSOperationVC.m in Sources */,
 				1C0B965F1B0677A300E43B62 /* RegionMonitor.m in Sources */,
 				1C49920C1B2CE9F60011048B /* NetworkingVC.m in Sources */,
 				1C0DE7EE1B629708002431C6 /* UIAlgorithmsDetailVC.m in Sources */,
@@ -617,6 +627,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Pedro Ontiveros (R33N75DBJE)";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					"NDEBUG=1",
+				);
 				INFOPLIST_FILE = iOS8Fundamentals/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

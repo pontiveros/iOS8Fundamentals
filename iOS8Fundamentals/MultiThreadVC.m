@@ -9,6 +9,8 @@
 #import "MultiThreadVC.h"
 #import "GrandCentralDispatchVC.h"
 #import "NSThreadVC.h"
+#import "NSOperationVC.h"
+
 
 
 @interface MultiThreadVC ()
@@ -26,6 +28,7 @@
         items = @{@"Grand Central Dispatch" : @"openGCDVC",
                   @"NSThread Class" : @"openNSThreadVC",
                   @"NSRunLoop Class" : @"openNSRunLoppVC",
+                  @"NSOperation" : @"openNSOperation",
                   @"Synchronization" : @"openSyncVC"};
     }
 }
@@ -54,6 +57,12 @@
 - (void)openNSThreadVC
 {
     NSThreadVC *vc = [[NSThreadVC alloc] initWithNibName:@"NSThreadView" bundle:nil];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (void)openNSOperation
+{
+    NSOperationVC *vc = [[NSOperationVC alloc] initWithNibName:@"NSOperationView" bundle:nil];
     [self.navigationController pushViewController:vc animated:YES];
 }
 

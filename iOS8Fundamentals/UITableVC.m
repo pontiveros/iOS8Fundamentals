@@ -28,7 +28,7 @@
 //        [self.items addObject:[NSString stringWithFormat:@"Item order %d", (i + 1)]];
 //    }
     
-    [self downloadItems];
+    [self downloadItemsInBackground];
     
 // self.items = @[@"Item 1", @"Item 2", @"Item 3", @"Item 4", @"Item 5", @"Item 6", @"Item 7", @"Item 8"];
 }
@@ -59,25 +59,79 @@
     }
     
     NSDictionary *item = self.items[indexPath.row];
-    cell.textLabel.text = [item objectForKey:@"url"];
+    cell.textLabel.text = [item objectForKey:@"title"];
+    
+//    __weak UITableVC *pSelf = self;
+//    
+//    dispatch_async(dispatch_get_main_queue(), ^{
+//        NSDictionary *dict = [pSelf.items objectAtIndex:indexPath.row];
+//        NSString *url = [dict objectForKey:@"url"];
+//        UIImage  *img = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:url]]];
+//        [cell.imageView setImage:img];
+//        [pSelf.tableView reloadData];
+//    });
+    
+    return cell;
+}
+
+- (void)downloadItemsInBackground
+{
+    if (!self.backgroundQueue) {
+        self.backgroundQueue = dispatch_queue_create("com.qbxsoft.backgroundQueue", DISPATCH_QUEUE_SERIAL);
+    }
+
+    [self.items removeAllObjects];
     
     __weak UITableVC *pSelf = self;
     
-    dispatch_async(dispatch_get_main_queue(), ^{
-        NSDictionary *dict = [pSelf.items objectAtIndex:indexPath.row];
-        NSString *url = [dict objectForKey:@"url"];
-        UIImage  *img = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:url]]];
-        [cell.imageView setImage:img];
-        [pSelf.tableView reloadData];
+    dispatch_async(self.backgroundQueue, ^{
+        [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+        NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:REMOTE_URL]
+                                                 cachePolicy:NSURLRequestUseProtocolCachePolicy
+                                             timeoutInterval:2400000.0]; // TimeOut set on 4 mins.
+        NSURLResponse *response = nil;
+        NSError *error = nil;
+        NSData   *data = [NSURLConnection sendSynchronousRequest:request
+                                               returningResponse:&response
+                                                           error:&error];
+
+        if (!error) {
+            id json = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&error];
+            
+            if (!error) {
+                NSArray *dict = (NSArray*)json;
+                
+                for (NSDictionary *item in dict) {
+                    [pSelf.items addObject:item];
+                    NSLog(@"%@", item);
+                    
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        [pSelf.tableView reloadData];
+                    });
+#ifdef DELAY_UITABLEVC
+                    sleep(1);
+#endif
+                }
+                
+            } else {
+                NSLog(@"There's an error trying to get data from remote: %@", [error description]);
+            }
+        } else {
+            NSLog(@"Error requesting data: %@", [error description]);
+        }
+        
+        [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+        NSLog(@"Array has been loaded!");
     });
-    
-    return cell;
 }
 
 - (void)downloadItems
 {
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
-    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://jsonplaceholder.typicode.com/photos"]];
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:REMOTE_URL]
+                                             cachePolicy:NSURLRequestUseProtocolCachePolicy
+                                         timeoutInterval:2400000.0];
+    
     [NSURLConnection sendAsynchronousRequest:request
                                        queue:[[NSOperationQueue alloc] init]
                            completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
@@ -89,17 +143,30 @@
                                    for (NSDictionary *item in dict) {
                                        [self.items addObject:item];
                                        NSLog(@"%@", item);
+                                       dispatch_async(dispatch_get_main_queue(), ^{
+                                           [self.tableView reloadData];
+                                       });
                                    }
-                                   
-                                   dispatch_async(dispatch_get_main_queue(), ^{
-                                        [self.tableView reloadData];
-                                        [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
-                                   });
-                                   
+//                                   dispatch_async(dispatch_get_main_queue(), ^{
+//                                        [self.tableView reloadData];
+//                                        [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+//                                   });
                                } else {
+                                   UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"ERROR"
+                                                                                                  message:[error description]
+                                                                                           preferredStyle:UIAlertControllerStyleAlert];
+                                   
+                                   UIAlertAction *action = [UIAlertAction actionWithTitle:@"Accept"
+                                                                                    style:UIAlertActionStyleDefault
+                                                                                  handler:nil];
+                                   [alert addAction:action];
+                                   
+                                   [self presentViewController:alert animated:YES completion:nil];
                                    NSLog(@"ERROR: %@", [error description]);
-                                   [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+//                                   [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
                                }
+                               
+                               [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
                            }];
 }
 

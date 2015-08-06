@@ -47,12 +47,23 @@
                         <action selector="onTouchOpenZBarScann:" destination="-1" eventType="touchUpInside" id="sfT-BH-f6d"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e1c-aj-lh6">
+                    <rect key="frame" x="257" y="246" width="86" height="30"/>
+                    <state key="normal" title="Lock Screen">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="onTouchLockScreen:" destination="-1" eventType="touchUpInside" id="W5x-qo-lCk"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="0CO-uf-cey" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailingMargin" id="1X5-B0-ZUz"/>
+                <constraint firstItem="e1c-aj-lh6" firstAttribute="centerX" secondItem="5tt-6o-e6x" secondAttribute="centerX" id="9PX-9K-JaT"/>
                 <constraint firstItem="5tt-6o-e6x" firstAttribute="top" secondItem="IJc-QS-UbR" secondAttribute="bottom" constant="24" id="A5m-bk-lQU"/>
                 <constraint firstItem="5tt-6o-e6x" firstAttribute="centerX" secondItem="IJc-QS-UbR" secondAttribute="centerX" id="AGK-Gi-nWu"/>
+                <constraint firstItem="e1c-aj-lh6" firstAttribute="top" secondItem="5tt-6o-e6x" secondAttribute="bottom" constant="28" id="C8w-ci-5wi"/>
                 <constraint firstItem="0CO-uf-cey" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="97" id="CY2-gE-QCV"/>
                 <constraint firstItem="IJc-QS-UbR" firstAttribute="top" secondItem="0CO-uf-cey" secondAttribute="bottom" constant="16" id="GeY-lp-bsO"/>
                 <constraint firstItem="IJc-QS-UbR" firstAttribute="centerX" secondItem="0CO-uf-cey" secondAttribute="centerX" id="Ybp-e4-fLI"/>
