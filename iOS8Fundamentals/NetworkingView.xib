@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
@@ -19,7 +19,7 @@
                     <rect key="frame" x="199" y="137" width="203" height="30"/>
                     <color key="backgroundColor" red="0.40000000596046448" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="203" id="v85-hZ-WS4"/>
+                        <constraint firstAttribute="width" constant="203" id="ORt-gw-IIi"/>
                     </constraints>
                     <state key="normal" title="Write File">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -32,14 +32,37 @@
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dPz-El-WV5">
+                    <rect key="frame" x="199" y="285" width="203" height="30"/>
+                    <state key="normal" title="Ping">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="onTouchPing:" destination="-1" eventType="touchUpInside" id="vGS-nl-eWD"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bm3-i9-iMW">
+                    <rect key="frame" x="257" y="347" width="87" height="30"/>
+                    <state key="normal" title="WKWebView">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="onTouchWKWebView:" destination="-1" eventType="touchUpInside" id="jN9-7o-uVm"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="ALu-53-gxw" firstAttribute="trailing" secondItem="jgL-ha-lqd" secondAttribute="trailing" id="3u5-Ho-VCL"/>
-                <constraint firstItem="jgL-ha-lqd" firstAttribute="top" secondItem="ALu-53-gxw" secondAttribute="bottom" constant="55" id="WKE-Y0-gCi"/>
-                <constraint firstItem="jgL-ha-lqd" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="ehl-OA-giJ"/>
-                <constraint firstItem="ALu-53-gxw" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="137" id="iNW-Tr-FPL"/>
-                <constraint firstItem="ALu-53-gxw" firstAttribute="leading" secondItem="jgL-ha-lqd" secondAttribute="leading" id="keO-54-Mtg"/>
+                <constraint firstItem="bm3-i9-iMW" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="BTa-wk-mBa"/>
+                <constraint firstItem="bm3-i9-iMW" firstAttribute="centerX" secondItem="dPz-El-WV5" secondAttribute="centerX" id="GhR-VO-sAq"/>
+                <constraint firstItem="dPz-El-WV5" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="HkZ-AT-Wg3"/>
+                <constraint firstItem="dPz-El-WV5" firstAttribute="leading" secondItem="jgL-ha-lqd" secondAttribute="leading" id="SCc-fC-Th3"/>
+                <constraint firstItem="jgL-ha-lqd" firstAttribute="top" secondItem="ALu-53-gxw" secondAttribute="bottom" constant="55" id="U4I-sD-1J0"/>
+                <constraint firstItem="jgL-ha-lqd" firstAttribute="trailing" secondItem="dPz-El-WV5" secondAttribute="trailing" id="hMb-tI-gOf"/>
+                <constraint firstItem="dPz-El-WV5" firstAttribute="top" secondItem="jgL-ha-lqd" secondAttribute="bottom" constant="33" id="krs-qa-ojR"/>
+                <constraint firstItem="bm3-i9-iMW" firstAttribute="top" secondItem="dPz-El-WV5" secondAttribute="bottom" constant="32" id="lDz-GX-map"/>
+                <constraint firstItem="jgL-ha-lqd" firstAttribute="leading" secondItem="ALu-53-gxw" secondAttribute="leading" id="oCW-yu-QtM"/>
+                <constraint firstItem="ALu-53-gxw" firstAttribute="trailing" secondItem="jgL-ha-lqd" secondAttribute="trailing" id="sXf-lq-c0X"/>
             </constraints>
             <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
         </view>

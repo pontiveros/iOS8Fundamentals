@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-//#define REMOTE_URL @"http://jsonplaceholder.typicode.com/photos"
-#define REMOTE_URL @"http://jsonplaceholder.typicode.com/albums"
+#define REMOTE_URL @"http://jsonplaceholder.typicode.com/photos"
+//#define REMOTE_URL @"http://jsonplaceholder.typicode.com/albums"
 
 @interface UITableVC : UITableViewController
 

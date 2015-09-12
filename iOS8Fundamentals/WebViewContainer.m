@@ -1,26 +1,31 @@
 //
-//  NetworkingVC.m
+//  WebViewContainer.m
 //  iOSWorkshop
 //
-//  Created by Pedro Ontiveros on 6/13/15.
+//  Created by Pedro Ontiveros on 9/10/15.
 //  Copyright (c) 2015 Pedro Ontiveros. All rights reserved.
 //
 
-#import "NetworkingVC.h"
-#import "UIPingVC.h"
 #import "WebViewContainer.h"
+#import <WebKit/WebKit.h>
 
-
-@interface NetworkingVC ()
+@interface WebViewContainer ()
 
 @end
 
-@implementation NetworkingVC
+@implementation WebViewContainer
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.title = @"Files & Networking";
+    if (NSClassFromString(@"WKWebView")) {
+        WKWebView *web = [[WKWebView alloc] initWithFrame:[[self view] bounds]];
+        [web loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"https://10.27.219.153/ETE/App_Receipts/index.aspx#/"]]];
+        self.webView = web;
+    } else {
+        self.webView = [[UIWebView alloc] initWithFrame:[[self view] bounds]];
+    }
+    [self.view addSubview:self.webView];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -37,17 +42,5 @@
     // Pass the selected object to the new view controller.
 }
 */
-
-- (IBAction)onTouchPing:(id)sender
-{
-    UIPingVC *vc = [[UIPingVC alloc] initWithNibName:@"UIPingView" bundle:nil];
-    [self.navigationController pushViewController:vc animated:YES];
-}
-
-- (IBAction)onTouchWKWebView:(id)sender
-{
-    WebViewContainer *wvc = [[WebViewContainer alloc] initWithNibName:@"WebViewContainer" bundle:nil];
-    [self.navigationController pushViewController:wvc animated:YES];
-}
 
 @end

@@ -43,6 +43,7 @@
 
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
 {
+    NSLog(@"ERROR: %@", [error description]);
     [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
 }
 

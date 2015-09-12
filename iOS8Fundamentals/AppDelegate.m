@@ -9,6 +9,17 @@
 #import "AppDelegate.h"
 #import "RegionMonitor.h"
 
+// XXXXX: Remove this before commit - Begin.
+@implementation NSURLRequest (NSURLRequestWithIgnoreSSL)
+
++ (BOOL)allowsAnyHTTPSCertificateForHost:(NSString *)host
+{
+    return YES;
+}
+
+@end
+// XXXXX: Remove this before commit - End.
+
 @interface AppDelegate ()
 
 @end

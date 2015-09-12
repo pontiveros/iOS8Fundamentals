@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
@@ -17,17 +17,17 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cC8-xw-fLY">
-                    <rect key="frame" x="0.0" y="470" width="600" height="130"/>
+                    <rect key="frame" x="0.0" y="470" width="600" height="162"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="1eN-I5-yNG"/>
                         <outlet property="delegate" destination="-1" id="ib3-Sg-SvN"/>
                     </connections>
                 </pickerView>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Hxw-xa-xAN">
-                    <rect key="frame" x="4" y="0.0" width="592" height="479"/>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Hxw-xa-xAN">
+                    <rect key="frame" x="4" y="67" width="592" height="413"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="414" id="VlJ-mL-arZ"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="479" id="xcx-xJ-HAq"/>
                     </constraints>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="GK2-lo-47y"/>
@@ -37,14 +37,16 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="Hxw-xa-xAN" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="65" id="5U1-K4-nIN"/>
-                <constraint firstItem="Hxw-xa-xAN" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="4" id="NUB-fc-WcN"/>
-                <constraint firstAttribute="trailing" secondItem="cC8-xw-fLY" secondAttribute="trailing" id="aF6-pB-3Eq"/>
-                <constraint firstItem="cC8-xw-fLY" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="cpb-1j-tfF"/>
-                <constraint firstAttribute="bottom" secondItem="cC8-xw-fLY" secondAttribute="bottom" constant="-32" id="mG7-Qc-BMb"/>
-                <constraint firstItem="cC8-xw-fLY" firstAttribute="centerX" secondItem="Hxw-xa-xAN" secondAttribute="centerX" id="ua2-Ia-BMr"/>
+                <constraint firstAttribute="trailing" secondItem="cC8-xw-fLY" secondAttribute="trailing" id="0mr-dg-C4D"/>
+                <constraint firstItem="cC8-xw-fLY" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="5km-Me-Qoa"/>
+                <constraint firstItem="cC8-xw-fLY" firstAttribute="centerX" secondItem="Hxw-xa-xAN" secondAttribute="centerX" id="9ed-h7-H07"/>
+                <constraint firstAttribute="bottom" relation="lessThanOrEqual" secondItem="Hxw-xa-xAN" secondAttribute="bottom" constant="121" id="Dd0-6l-NzY"/>
+                <constraint firstItem="Hxw-xa-xAN" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="4" id="Ti6-Uw-sPr"/>
+                <constraint firstAttribute="bottom" secondItem="cC8-xw-fLY" secondAttribute="bottom" constant="-32" id="vBn-Ka-Yx3"/>
+                <constraint firstItem="Hxw-xa-xAN" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="zOJ-Bm-XqO"/>
             </constraints>
-            <point key="canvasLocation" x="427" y="349"/>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+            <point key="canvasLocation" x="400" y="296"/>
         </view>
     </objects>
 </document>
