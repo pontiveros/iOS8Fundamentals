@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <objects>
@@ -19,21 +18,21 @@
                     <rect key="frame" x="199" y="137" width="203" height="30"/>
                     <color key="backgroundColor" red="0.40000000596046448" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="203" id="ORt-gw-IIi"/>
+                        <constraint firstAttribute="width" constant="203" id="foB-hS-jB7"/>
                     </constraints>
                     <state key="normal" title="Write File">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jgL-ha-lqd">
-                    <rect key="frame" x="199" y="222" width="203" height="30"/>
+                    <rect key="frame" x="199" y="182" width="203" height="30"/>
                     <color key="backgroundColor" red="0.40000000596046448" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <state key="normal" title="Download">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dPz-El-WV5">
-                    <rect key="frame" x="199" y="285" width="203" height="30"/>
+                    <rect key="frame" x="199" y="276" width="203" height="30"/>
                     <state key="normal" title="Ping">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -42,7 +41,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bm3-i9-iMW">
-                    <rect key="frame" x="257" y="347" width="87" height="30"/>
+                    <rect key="frame" x="257" y="314" width="87" height="30"/>
                     <state key="normal" title="WKWebView">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -50,19 +49,32 @@
                         <action selector="onTouchWKWebView:" destination="-1" eventType="touchUpInside" id="jN9-7o-uVm"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QkJ-O4-1Q7">
+                    <rect key="frame" x="199" y="232" width="203" height="30"/>
+                    <color key="backgroundColor" red="0.40000000600000002" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="Upload">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="onTouchUpload:" destination="-1" eventType="touchUpInside" id="g6Q-bX-Gb5"/>
+                    </connections>
+                </button>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" red="0.40000000596046448" green="1" blue="0.80000001192092896" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstItem="bm3-i9-iMW" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="BTa-wk-mBa"/>
-                <constraint firstItem="bm3-i9-iMW" firstAttribute="centerX" secondItem="dPz-El-WV5" secondAttribute="centerX" id="GhR-VO-sAq"/>
-                <constraint firstItem="dPz-El-WV5" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="HkZ-AT-Wg3"/>
-                <constraint firstItem="dPz-El-WV5" firstAttribute="leading" secondItem="jgL-ha-lqd" secondAttribute="leading" id="SCc-fC-Th3"/>
-                <constraint firstItem="jgL-ha-lqd" firstAttribute="top" secondItem="ALu-53-gxw" secondAttribute="bottom" constant="55" id="U4I-sD-1J0"/>
-                <constraint firstItem="jgL-ha-lqd" firstAttribute="trailing" secondItem="dPz-El-WV5" secondAttribute="trailing" id="hMb-tI-gOf"/>
-                <constraint firstItem="dPz-El-WV5" firstAttribute="top" secondItem="jgL-ha-lqd" secondAttribute="bottom" constant="33" id="krs-qa-ojR"/>
-                <constraint firstItem="bm3-i9-iMW" firstAttribute="top" secondItem="dPz-El-WV5" secondAttribute="bottom" constant="32" id="lDz-GX-map"/>
-                <constraint firstItem="jgL-ha-lqd" firstAttribute="leading" secondItem="ALu-53-gxw" secondAttribute="leading" id="oCW-yu-QtM"/>
-                <constraint firstItem="ALu-53-gxw" firstAttribute="trailing" secondItem="jgL-ha-lqd" secondAttribute="trailing" id="sXf-lq-c0X"/>
+                <constraint firstItem="ALu-53-gxw" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="137" id="Hla-0l-OUG"/>
+                <constraint firstItem="QkJ-O4-1Q7" firstAttribute="trailing" secondItem="dPz-El-WV5" secondAttribute="trailing" id="Kcx-8o-Edd"/>
+                <constraint firstItem="dPz-El-WV5" firstAttribute="top" secondItem="QkJ-O4-1Q7" secondAttribute="bottom" constant="14" id="MXq-mO-lhq"/>
+                <constraint firstItem="jgL-ha-lqd" firstAttribute="top" secondItem="ALu-53-gxw" secondAttribute="bottom" constant="15" id="TD0-5e-HOZ"/>
+                <constraint firstItem="dPz-El-WV5" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="UEs-YI-w8E"/>
+                <constraint firstItem="ALu-53-gxw" firstAttribute="leading" secondItem="jgL-ha-lqd" secondAttribute="leading" id="W3k-oS-h0H"/>
+                <constraint firstItem="jgL-ha-lqd" firstAttribute="trailing" secondItem="QkJ-O4-1Q7" secondAttribute="trailing" id="gBe-mW-k9S"/>
+                <constraint firstItem="jgL-ha-lqd" firstAttribute="trailing" secondItem="ALu-53-gxw" secondAttribute="trailing" id="jMu-Wh-Jfv"/>
+                <constraint firstItem="jgL-ha-lqd" firstAttribute="leading" secondItem="QkJ-O4-1Q7" secondAttribute="leading" id="qA6-ZB-dsu"/>
+                <constraint firstItem="dPz-El-WV5" firstAttribute="centerX" secondItem="bm3-i9-iMW" secondAttribute="centerX" id="qiE-hg-bW6"/>
+                <constraint firstItem="dPz-El-WV5" firstAttribute="leading" secondItem="QkJ-O4-1Q7" secondAttribute="leading" id="vUu-bw-Jky"/>
+                <constraint firstItem="QkJ-O4-1Q7" firstAttribute="top" secondItem="jgL-ha-lqd" secondAttribute="bottom" constant="20" id="wZj-KX-Xuw"/>
+                <constraint firstItem="bm3-i9-iMW" firstAttribute="top" secondItem="dPz-El-WV5" secondAttribute="bottom" constant="8" symbolic="YES" id="zIm-VV-Ibn"/>
             </constraints>
             <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
         </view>

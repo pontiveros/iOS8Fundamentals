@@ -49,6 +49,7 @@
 		1CC320C01B72818C008B567B /* NSOperationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CC320BF1B72818C008B567B /* NSOperationVC.m */; };
 		1CC320C21B72819E008B567B /* NSOperationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1CC320C11B72819E008B567B /* NSOperationView.xib */; };
 		1CC9CCA21B041EF6001EB21A /* UIWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CC9CCA11B041EF6001EB21A /* UIWebViewController.m */; };
+		1CD8286C1BA8C10E00A71567 /* PickerImageHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CD8286A1BA8C10E00A71567 /* PickerImageHelper.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		1CECEF1F1B2FAFCC00A1CA73 /* CameraVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CECEF1E1B2FAFCC00A1CA73 /* CameraVC.m */; };
 		1CECEF201B2FAFCC00A1CA73 /* CameraVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CECEF1E1B2FAFCC00A1CA73 /* CameraVC.m */; };
 		1CECEF221B2FB06800A1CA73 /* CameraView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1CECEF211B2FB06800A1CA73 /* CameraView.xib */; };
@@ -133,6 +134,8 @@
 		1CC320C11B72819E008B567B /* NSOperationView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NSOperationView.xib; sourceTree = "<group>"; };
 		1CC9CCA01B041EF6001EB21A /* UIWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIWebViewController.h; sourceTree = "<group>"; };
 		1CC9CCA11B041EF6001EB21A /* UIWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIWebViewController.m; sourceTree = "<group>"; };
+		1CD8286A1BA8C10E00A71567 /* PickerImageHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PickerImageHelper.m; sourceTree = "<group>"; };
+		1CD8286B1BA8C10E00A71567 /* PickerImageHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PickerImageHelper.h; sourceTree = "<group>"; };
 		1CECEF1D1B2FAFCC00A1CA73 /* CameraVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraVC.h; sourceTree = "<group>"; };
 		1CECEF1E1B2FAFCC00A1CA73 /* CameraVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraVC.m; sourceTree = "<group>"; };
 		1CECEF211B2FB06800A1CA73 /* CameraView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CameraView.xib; sourceTree = "<group>"; };
@@ -322,6 +325,8 @@
 				1C0AE0071BA223F0001658FE /* WebViewContainer.h */,
 				1C0AE0081BA223F0001658FE /* WebViewContainer.m */,
 				1C0AE00A1BA2241B001658FE /* WebViewContainer.xib */,
+				1CD8286A1BA8C10E00A71567 /* PickerImageHelper.m */,
+				1CD8286B1BA8C10E00A71567 /* PickerImageHelper.h */,
 			);
 			name = Networking;
 			sourceTree = "<group>";
@@ -407,7 +412,7 @@
 				TargetAttributes = {
 					1C153F851B039D5200187EB7 = {
 						CreatedOnToolsVersion = 6.3.1;
-						DevelopmentTeam = DXK2N8YN8R;
+						DevelopmentTeam = WNP7SLC3X8;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -534,6 +539,7 @@
 				1C3678D71B9CEE1200878DFF /* UIPingVC.m in Sources */,
 				1C168F211B1A5080003957BD /* MultiThreadVC.m in Sources */,
 				1C153F8C1B039D5200187EB7 /* main.m in Sources */,
+				1CD8286C1BA8C10E00A71567 /* PickerImageHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -663,8 +669,8 @@
 			baseConfigurationReference = 3B48CA3DAA4FC4D640727AF0 /* Pods-iOSWorkshop.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
 					"COCOAPODS=1",
@@ -674,7 +680,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = iOSWorkshop;
-				PROVISIONING_PROFILE = "b9cc9a25-7690-4299-9621-816cbba25988";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -689,7 +695,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = iOSWorkshop;
-				PROVISIONING_PROFILE = "b9cc9a25-7690-4299-9621-816cbba25988";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

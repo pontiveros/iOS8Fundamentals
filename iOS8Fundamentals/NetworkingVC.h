@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PickerImageHelper.h"
 
-@interface NetworkingVC : UIViewController
+@interface NetworkingVC : UIViewController<NSURLSessionDelegate>
+
+@property (nonatomic, retain)PickerImageHelper *imageHelper;
 
 @end
