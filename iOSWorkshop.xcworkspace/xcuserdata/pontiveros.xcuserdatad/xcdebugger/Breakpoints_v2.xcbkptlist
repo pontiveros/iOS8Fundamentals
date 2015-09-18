@@ -182,31 +182,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iOS8Fundamentals/NetworkingVC.m"
-            timestampString = "464063736.722717"
+            timestampString = "464289583.972084"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "82"
-            endingLineNumber = "82"
-            landmarkName = "-sendImageByNSURLSession:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "iOS8Fundamentals/NetworkingVC.m"
-            timestampString = "464065619.221148"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "104"
-            endingLineNumber = "104"
+            startingLineNumber = "162"
+            endingLineNumber = "162"
             landmarkName = "-sendImageByNSURLSession:"
             landmarkType = "5">
          </BreakpointContent>
@@ -218,28 +202,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iOS8Fundamentals/NetworkingVC.m"
-            timestampString = "464065624.829645"
+            timestampString = "464289583.972084"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "125"
-            endingLineNumber = "125"
-            landmarkName = "-sendImageByNSURLSession2:"
+            startingLineNumber = "128"
+            endingLineNumber = "128"
+            landmarkName = "-sendImageByNSURLSession:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iOS8Fundamentals/NetworkingVC.m"
-            timestampString = "464071004.789024"
+            timestampString = "464283223.505404"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "172"
-            endingLineNumber = "172"
-            landmarkName = "-sendImageByNSURLSession2:"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "-viewDidLoad"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

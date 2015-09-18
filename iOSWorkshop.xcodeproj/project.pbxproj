@@ -38,11 +38,11 @@
 		1C3678D71B9CEE1200878DFF /* UIPingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C3678D61B9CEE1200878DFF /* UIPingVC.m */; };
 		1C3678DA1B9CF00300878DFF /* UIPingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C3678D91B9CF00300878DFF /* UIPingView.xib */; };
 		1C49920C1B2CE9F60011048B /* NetworkingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C49920B1B2CE9F60011048B /* NetworkingVC.m */; };
-		1C49920E1B2CEA1C0011048B /* NetworkingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C49920D1B2CEA1C0011048B /* NetworkingView.xib */; };
 		1C5653B81B03C99900BBE07D /* IBeaconView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C5653B71B03C99900BBE07D /* IBeaconView.xib */; };
 		1C5653BB1B03C9D600BBE07D /* IBeaconViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C5653BA1B03C9D600BBE07D /* IBeaconViewController.m */; };
 		1C5653BD1B03CCD400BBE07D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C5653BC1B03CCD400BBE07D /* CoreLocation.framework */; };
 		1C5653C01B04B6EB00BBE07D /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C5653BF1B04B6EB00BBE07D /* CoreBluetooth.framework */; };
+		1C88C7E01BAC69E10083007A /* NetworkingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C49920D1B2CEA1C0011048B /* NetworkingView.xib */; };
 		1CA75F951B1C8F5C00ACDCB7 /* NSThreadVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA75F941B1C8F5C00ACDCB7 /* NSThreadVC.m */; };
 		1CA75F971B1C8F9000ACDCB7 /* NSThreadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1CA75F961B1C8F9000ACDCB7 /* NSThreadView.xib */; };
 		1CC320BD1B710AC6008B567B /* UITableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CC320BC1B710AC6008B567B /* UITableVC.m */; };
@@ -455,10 +455,10 @@
 				1C168F291B1BED91003957BD /* GrandCentralDispatchView.xib in Resources */,
 				1CECEF221B2FB06800A1CA73 /* CameraView.xib in Resources */,
 				1C0DE7E61B627CA3002431C6 /* motorcycle.png in Resources */,
+				1C88C7E01BAC69E10083007A /* NetworkingView.xib in Resources */,
 				1C168F231B1A50A7003957BD /* MultiThreadView.xib in Resources */,
 				1C153F981B039D5200187EB7 /* Main.storyboard in Resources */,
 				1C153F9D1B039D5200187EB7 /* LaunchScreen.xib in Resources */,
-				1C49920E1B2CEA1C0011048B /* NetworkingView.xib in Resources */,
 				1C0DE7F01B62974B002431C6 /* UIAlgorithmsDetailView.xib in Resources */,
 				1C325AD21B54061300AE613F /* UIMemoryManagementView.xib in Resources */,
 				1CC320C21B72819E008B567B /* NSOperationView.xib in Resources */,
