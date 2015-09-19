@@ -22,6 +22,11 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.title = @"Files & Networking";
+#if TARGET_IPHONE_SIMULATOR
+    self.stringURL = @"http://localhost/uploadfiledashboard/uploadfile.php";
+#else
+    self.stringURL = @"http://192.168.1.27/uploadfiledashboard/uploadfile.php";
+#endif
 }
 
 - (void)didReceiveMemoryWarning {
@@ -72,10 +77,10 @@
 
 - (void)sendImageByNSURLConnection:(UIImage*)image
 {
-    NSString *stringURL = @"http://localhost/uploadfiledashboard/uploadfile.php";
     NSData   *imageData = UIImageJPEGRepresentation(image, .6);
     NSString   *boudary = @"0xKhTmLbOuNdArY";
     
+    NSAssert(imageData, @"Image data should not be null.");
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
     [request setCachePolicy:NSURLRequestReloadIgnoringCacheData];
     [request setHTTPShouldHandleCookies:NO];
@@ -95,7 +100,7 @@
     [body appendData:[[NSString stringWithFormat:@"\r\n--%@--\r\n", boudary] dataUsingEncoding:NSUTF8StringEncoding]];
     
     [request setHTTPBody:body]; // Set body to Request
-    [request setURL:[NSURL URLWithString:stringURL]]; // Set url to request.
+    [request setURL:[NSURL URLWithString:self.stringURL]];
     
     __weak NetworkingVC *pSelf = self;
     [NSURLConnection sendAsynchronousRequest:request
@@ -123,20 +128,16 @@
 - (void)sendImageByNSURLSession:(UIImage*)image
 {
     // Build the request body
-    NSString *boundary = @"-------------------123456789000000";
-    NSMutableData *body = [NSMutableData data];
-
-    // Body part for the attachament. This is an image.
-    NSData *imageData = UIImageJPEGRepresentation(image, 0.6);
+    NSString *boundary  = @"-------------------0xB0und4ry7657234";
+    NSData  *imageData  = UIImageJPEGRepresentation(image, 0.6);
+    NSAssert(imageData, @"Image data should not be null.");
     
-    if (imageData) {
-        [body appendData:[[NSString stringWithFormat:@"--%@\r\n", boundary] dataUsingEncoding:NSUTF8StringEncoding]];
-        [body appendData:[[NSString stringWithFormat:@"Content-Type: image/jpeg;"] dataUsingEncoding:NSUTF8StringEncoding]];
-        [body appendData:[[NSString stringWithFormat:@"Content-Disposition: form-data; name=\"%@\"; filename=\"image.jpg\"\r\n", @"uploadfile"] dataUsingEncoding:NSUTF8StringEncoding]];
-        [body appendData:imageData];
-        [body appendData:[[NSString stringWithFormat:@"\r\n"] dataUsingEncoding:NSUTF8StringEncoding]];
-    }
-    [body appendData:[[NSString stringWithFormat:@"--%@--\r\n", boundary] dataUsingEncoding:NSUTF8StringEncoding]];
+    NSMutableData *body = [NSMutableData data];
+    [body appendData:[[NSString stringWithFormat:@"\r\n--%@\r\n", boundary] dataUsingEncoding:NSUTF8StringEncoding]];
+    [body appendData:[[NSString stringWithFormat:@"Content-Disposition: form-data; name=\"uploadfile\"; filename=\"image.jpg\"\r\n"] dataUsingEncoding:NSUTF8StringEncoding]];
+    [body appendData:[[NSString stringWithFormat:@"Content-Type: image/jpeg\r\n\r\n"] dataUsingEncoding:NSUTF8StringEncoding]];
+    [body appendData:imageData];
+    [body appendData:[[NSString stringWithFormat:@"\r\n--%@--\r\n", boundary] dataUsingEncoding:NSUTF8StringEncoding]];
     
     // Setup the session
     NSURLSessionConfiguration *sessionConfiguration = [NSURLSessionConfiguration defaultSessionConfiguration];
@@ -146,12 +147,12 @@
     // We can use the delegate to track upload progress
     NSURLSession *session = [NSURLSession sessionWithConfiguration:sessionConfiguration delegate:nil delegateQueue:nil];
     
-    // Data uploading task. We could use NSURLSessionUploadTask instead of NSURLSessionDataTask if we needed to support uploads in the background
-    NSURL *url = [NSURL URLWithString:@"http://localhost/uploadfiledashboard/uploadfile.php"];
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
-    request.HTTPMethod = @"POST";
-    request.HTTPBody   = body;
-    
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
+    [request setURL:[NSURL URLWithString:self.stringURL]];
+    [request setHTTPMethod:@"POST"];
+    [request setHTTPBody:body];
+  
+    __weak NetworkingVC *pSelf = self;
     NSURLSessionDataTask *uploadTask = [session dataTaskWithRequest:request
                                                   completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
                                                       if (!error) {
@@ -161,6 +162,16 @@
                                                       } else {
                                                           NSLog(@"ERROR: %@", [error description]);
                                                       }
+                                                      UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Upload by NSURLSession"
+                                                                                                                     message:@"Upload has been finished."
+                                                                                                              preferredStyle:UIAlertControllerStyleAlert];
+                                                      
+                                                      UIAlertAction *action = [UIAlertAction actionWithTitle:@"Accept"
+                                                                                                       style:UIAlertActionStyleDefault
+                                                                                                     handler:nil];
+                                                      [alert addAction:action];
+                                                      
+                                                      [pSelf presentViewController:alert animated:YES completion:nil];
                                                   }];
     [uploadTask resume];
 }

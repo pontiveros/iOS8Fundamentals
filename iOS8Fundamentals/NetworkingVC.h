@@ -12,5 +12,6 @@
 @interface NetworkingVC : UIViewController<NSURLSessionDelegate>
 
 @property (nonatomic, retain)PickerImageHelper *imageHelper;
+@property (nonatomic, retain)NSString *stringURL;
 
 @end
