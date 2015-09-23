@@ -20,7 +20,7 @@
     // Do any additional setup after loading the view.
     if (NSClassFromString(@"WKWebView")) {
         WKWebView *web = [[WKWebView alloc] initWithFrame:[[self view] bounds]];
-        [web loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"https://10.27.219.153/ETE/App_Receipts/index.aspx#/"]]];
+        [web loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"https://www.amd.com"]]];
         self.webView = web;
     } else {
         self.webView = [[UIWebView alloc] initWithFrame:[[self view] bounds]];
