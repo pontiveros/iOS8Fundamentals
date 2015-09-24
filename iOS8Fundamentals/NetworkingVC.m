@@ -75,6 +75,47 @@
     }];
 }
 
+- (IBAction)onTouchDownload:(id)sender
+{
+    __block UITextField *_textField = nil;
+    
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle: @"Download From"
+                                                                   message: @""
+                                                            preferredStyle: UIAlertControllerStyleAlert];
+    
+    UIAlertAction *accept = [UIAlertAction actionWithTitle:@"Accept"
+                                                     style:UIAlertActionStyleDefault
+                                                   handler:^(UIAlertAction *action) {
+                                                       if (_textField) {
+                                                            [self downloadFromRemote:_textField.text];
+                                                       } else {
+                                                           NSLog(@"TextField is nil.");
+                                                       }
+                                                   }];
+    
+    UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:nil];
+    
+    [alert addAction:accept];
+    [alert addAction:cancel];
+    
+    [alert addTextFieldWithConfigurationHandler:^(UITextField *textField) {
+        textField.placeholder = @"http://www.mysite.com";
+        _textField = textField;
+    }];
+    
+    [self presentViewController:alert animated:YES completion:nil];
+}
+
+- (void)downloadFromRemote:(NSString*)stringURL
+{
+    if (stringURL) {
+        NSLog(@"url: %@", stringURL);
+        // We have to start download process here...
+    } else {
+        NSLog(@"The url is empty.");
+    }
+}
+
 - (void)sendImageByNSURLConnection:(UIImage*)image
 {
     NSData   *imageData = UIImageJPEGRepresentation(image, .6);

@@ -186,11 +186,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iOS8Fundamentals/NetworkingVC.m"
-            timestampString = "464331583.093472"
+            timestampString = "464751849.816276"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "131"
-            endingLineNumber = "131"
+            startingLineNumber = "170"
+            endingLineNumber = "170"
             landmarkName = "-sendImageByNSURLSession:"
             landmarkType = "5">
          </BreakpointContent>
@@ -202,11 +202,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iOS8Fundamentals/NetworkingVC.m"
-            timestampString = "464331652.711945"
+            timestampString = "464751849.816276"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "158"
-            endingLineNumber = "158"
+            startingLineNumber = "197"
+            endingLineNumber = "197"
             landmarkName = "-sendImageByNSURLSession:"
             landmarkType = "5">
          </BreakpointContent>
