@@ -40,18 +40,24 @@
     UIImagePickerController *picker = [[UIImagePickerController alloc] init];
     picker.delegate = self;
     picker.allowsEditing = YES;
+    
+#if TARGET_IPHONE_SIMULATOR
+    picker.sourceType = UIImagePickerControllerSourceTypeSavedPhotosAlbum;
+#else
     picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+#endif
+
     [self presentViewController:picker animated:YES completion:nil];
 }
 
 #pragma mark - UIImagePickerControllerDelegate
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
-    
+    [picker dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
 {
-    
+    [picker dismissViewControllerAnimated:YES completion:nil];
 }
 @end

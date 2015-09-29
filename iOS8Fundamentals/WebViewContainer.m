@@ -7,7 +7,6 @@
 //
 
 #import "WebViewContainer.h"
-#import <WebKit/WebKit.h>
 
 @interface WebViewContainer ()
 
@@ -17,15 +16,45 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.title = @"WKWebView";
     // Do any additional setup after loading the view.
     if (NSClassFromString(@"WKWebView")) {
-        WKWebView *web = [[WKWebView alloc] initWithFrame:[[self view] bounds]];
-        [web loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"https://www.amd.com"]]];
+    
+        NSError  *error = nil;
+        NSString  *path = [[NSBundle mainBundle] pathForResource: @"ScriptWebView" ofType: @"js"];
+        NSString *scriptFromFile = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:&error];
+    
+        NSString *script = @"function onClickButton() { window.webkit.messageHandlers.Observe.postMessage('Message from web'); console.log('click here... working!');}";
+        WKUserScript *userScript = [[WKUserScript alloc] initWithSource:script injectionTime:WKUserScriptInjectionTimeAtDocumentEnd forMainFrameOnly:YES];
+        WKUserScript *scriptCamera = [[WKUserScript alloc] initWithSource:scriptFromFile injectionTime:WKUserScriptInjectionTimeAtDocumentEnd forMainFrameOnly:YES];
+        WKUserContentController *userController  = [[WKUserContentController alloc] init];
+        WKWebViewConfiguration *webConfiguration = [[WKWebViewConfiguration alloc] init];
+        
+        [userController addUserScript:userScript];
+        [userController addUserScript:scriptCamera];
+        [userController addScriptMessageHandler:self name:@"Observe"];
+        [webConfiguration setUserContentController:userController];
+        
+//        WKWebView *web = [[WKWebView alloc] initWithFrame:[[self view] bounds] configuration:webConfiguration];
+        WKWebView *web = [[WKWebView alloc] initWithFrame:CGRectMake(0,0,500,400) configuration:webConfiguration];
+        
+        [web loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://localhost/webkitapp"]]];
+        [web setUserInteractionEnabled:YES];
+        
+        [web setUIDelegate:self];
         self.webView = web;
     } else {
         self.webView = [[UIWebView alloc] initWithFrame:[[self view] bounds]];
     }
     [self.view addSubview:self.webView];
+}
+
+- (NSString*)getScriptFrom
+{
+    return @"function openCamera() {\
+                console.log('Message from native, please check out.');\
+            }";
 }
 
 - (void)didReceiveMemoryWarning {
@@ -43,4 +72,12 @@
 }
 */
 
+- (void)userContentController:(WKUserContentController *)userContentController didReceiveScriptMessage:(WKScriptMessage *)message
+{
+    if ([message.name isEqualToString:@"Observe"]) {
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Message" message:message.body preferredStyle:UIAlertControllerStyleAlert];
+        [alert addAction:[UIAlertAction actionWithTitle:@"Accept" style:UIAlertActionStyleCancel handler:nil]];
+        [self presentViewController:alert animated:YES completion:nil];
+    }
+}
 @end

@@ -18,6 +18,7 @@
 		1C0DE7EA1B6292A9002431C6 /* UIAlgorithmsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C0DE7E91B6292A9002431C6 /* UIAlgorithmsVC.m */; };
 		1C0DE7EE1B629708002431C6 /* UIAlgorithmsDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C0DE7ED1B629708002431C6 /* UIAlgorithmsDetailVC.m */; };
 		1C0DE7F01B62974B002431C6 /* UIAlgorithmsDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C0DE7EF1B62974B002431C6 /* UIAlgorithmsDetailView.xib */; };
+		1C122C711BB5801D003AB3C3 /* ScriptWebView.js in Resources */ = {isa = PBXBuildFile; fileRef = 1C122C701BB5801D003AB3C3 /* ScriptWebView.js */; settings = {ASSET_TAGS = (); }; };
 		1C153F8C1B039D5200187EB7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C153F8B1B039D5200187EB7 /* main.m */; };
 		1C153F8F1B039D5200187EB7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C153F8E1B039D5200187EB7 /* AppDelegate.m */; };
 		1C153F921B039D5200187EB7 /* iOSWorkshop.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1C153F901B039D5200187EB7 /* iOSWorkshop.xcdatamodeld */; };
@@ -84,6 +85,7 @@
 		1C0DE7EC1B629708002431C6 /* UIAlgorithmsDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIAlgorithmsDetailVC.h; sourceTree = "<group>"; };
 		1C0DE7ED1B629708002431C6 /* UIAlgorithmsDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIAlgorithmsDetailVC.m; sourceTree = "<group>"; };
 		1C0DE7EF1B62974B002431C6 /* UIAlgorithmsDetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UIAlgorithmsDetailView.xib; sourceTree = "<group>"; };
+		1C122C701BB5801D003AB3C3 /* ScriptWebView.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = ScriptWebView.js; sourceTree = "<group>"; };
 		1C153F861B039D5200187EB7 /* iOSWorkshop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSWorkshop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C153F8A1B039D5200187EB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1C153F8B1B039D5200187EB7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -211,6 +213,7 @@
 		1C153F881B039D5200187EB7 /* iOSWorkshop */ = {
 			isa = PBXGroup;
 			children = (
+				1CE1ECA51BBA32F60045D214 /* Camera */,
 				1C267E091B96031F00005630 /* iPad */,
 				1C0DE7EB1B6292B2002431C6 /* Algoritms */,
 				1C0DE7E71B62927B002431C6 /* UITableViewSample */,
@@ -234,8 +237,6 @@
 				1C325ACE1B5405E400AE613F /* UIMemoryManagementVC.h */,
 				1C325ACF1B5405E400AE613F /* UIMemoryManagementVC.m */,
 				1C325AD11B54061300AE613F /* UIMemoryManagementView.xib */,
-				1CECEF1D1B2FAFCC00A1CA73 /* CameraVC.h */,
-				1CECEF1E1B2FAFCC00A1CA73 /* CameraVC.m */,
 				1CECEF211B2FB06800A1CA73 /* CameraView.xib */,
 				1C153F991B039D5200187EB7 /* Images.xcassets */,
 				1C153F9B1B039D5200187EB7 /* LaunchScreen.xib */,
@@ -327,6 +328,7 @@
 				1C0AE00A1BA2241B001658FE /* WebViewContainer.xib */,
 				1CD8286A1BA8C10E00A71567 /* PickerImageHelper.m */,
 				1CD8286B1BA8C10E00A71567 /* PickerImageHelper.h */,
+				1C122C701BB5801D003AB3C3 /* ScriptWebView.js */,
 			);
 			name = Networking;
 			sourceTree = "<group>";
@@ -350,6 +352,15 @@
 				1C0B965E1B0677A300E43B62 /* RegionMonitor.m */,
 			);
 			name = Services;
+			sourceTree = "<group>";
+		};
+		1CE1ECA51BBA32F60045D214 /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				1CECEF1D1B2FAFCC00A1CA73 /* CameraVC.h */,
+				1CECEF1E1B2FAFCC00A1CA73 /* CameraVC.m */,
+			);
+			name = Camera;
 			sourceTree = "<group>";
 		};
 		ABFBE7DAE462414E554ADA63 /* Pods */ = {
@@ -452,6 +463,7 @@
 				1C5653B81B03C99900BBE07D /* IBeaconView.xib in Resources */,
 				1C0AE00B1BA2241B001658FE /* WebViewContainer.xib in Resources */,
 				1CA75F971B1C8F9000ACDCB7 /* NSThreadView.xib in Resources */,
+				1C122C711BB5801D003AB3C3 /* ScriptWebView.js in Resources */,
 				1C168F291B1BED91003957BD /* GrandCentralDispatchView.xib in Resources */,
 				1CECEF221B2FB06800A1CA73 /* CameraView.xib in Resources */,
 				1C0DE7E61B627CA3002431C6 /* motorcycle.png in Resources */,

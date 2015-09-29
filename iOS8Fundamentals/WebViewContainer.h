@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <WebKit/WebKit.h>
 
-@interface WebViewContainer : UIViewController
+@interface WebViewContainer : UIViewController<WKNavigationDelegate, WKScriptMessageHandler, WKUIDelegate>
 
 @property (nonatomic, retain)IBOutlet UIView *webView;
 
