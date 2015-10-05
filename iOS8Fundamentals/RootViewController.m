@@ -16,6 +16,8 @@
 #import "UITableVC.h"
 #import "UIAlgorithmsVC.h"
 #import "UIBarCodeReaderVC.h"
+#import "QSyncManager.h"
+#import "UICoreDataVC.h"
 
 
 @interface RootViewController ()
@@ -99,6 +101,12 @@
 - (void)openFilesAndNetworking
 {
     NetworkingVC *vc = [[NetworkingVC alloc] initWithNibName:@"NetworkingView" bundle:nil];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (void)openCoreDataSample
+{
+    UICoreDataVC *vc = [[UICoreDataVC alloc] initWithViewMode:UICOREDATA_MODE_ROOT];
     [self.navigationController pushViewController:vc animated:YES];
 }
 

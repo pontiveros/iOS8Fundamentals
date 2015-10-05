@@ -90,7 +90,7 @@
         NSLog(@"Message: %@", message);
     }
     
-    NSLog(@"Message to delay the processor activity.");
+//    NSLog(@"Message to delay the processor activity.");
     NSLog(@"Message: %@", message); // What will happen here ? (will crash!)
 }
 

@@ -18,7 +18,9 @@
     [super viewDidLoad];
     self.title = @"UIWebView";
     // Do any additional setup after loading the view.
-    [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.intel.com"]]];
+    self.navigationController.navigationBar.translucent = NO;
+    [self.navigationController.navigationBar setBackgroundColor:[UIColor blueColor]];
+    [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://localhost/getcustomer/TheCLanguage.pdf"]]];
 }
 
 - (void)didReceiveMemoryWarning {

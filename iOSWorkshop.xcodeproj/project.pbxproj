@@ -44,6 +44,10 @@
 		1C5653BD1B03CCD400BBE07D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C5653BC1B03CCD400BBE07D /* CoreLocation.framework */; };
 		1C5653C01B04B6EB00BBE07D /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C5653BF1B04B6EB00BBE07D /* CoreBluetooth.framework */; };
 		1C88C7E01BAC69E10083007A /* NetworkingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C49920D1B2CEA1C0011048B /* NetworkingView.xib */; };
+		1CA265B21BC0F34B00E994D9 /* QSyncManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA265B01BC0F34B00E994D9 /* QSyncManager.m */; settings = {ASSET_TAGS = (); }; };
+		1CA265BD1BC0F45800E994D9 /* Customer+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA265BA1BC0F45800E994D9 /* Customer+CoreDataProperties.m */; settings = {ASSET_TAGS = (); }; };
+		1CA265BE1BC0F45800E994D9 /* QCustomer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA265BC1BC0F45800E994D9 /* QCustomer.m */; settings = {ASSET_TAGS = (); }; };
+		1CA265C41BC18C1D00E994D9 /* UICoreDataVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA265C31BC18C1D00E994D9 /* UICoreDataVC.m */; settings = {ASSET_TAGS = (); }; };
 		1CA75F951B1C8F5C00ACDCB7 /* NSThreadVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA75F941B1C8F5C00ACDCB7 /* NSThreadVC.m */; };
 		1CA75F971B1C8F9000ACDCB7 /* NSThreadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1CA75F961B1C8F9000ACDCB7 /* NSThreadView.xib */; };
 		1CC320BD1B710AC6008B567B /* UITableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CC320BC1B710AC6008B567B /* UITableVC.m */; };
@@ -127,6 +131,14 @@
 		1C5653BA1B03C9D600BBE07D /* IBeaconViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBeaconViewController.m; sourceTree = "<group>"; };
 		1C5653BC1B03CCD400BBE07D /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		1C5653BF1B04B6EB00BBE07D /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		1CA265B01BC0F34B00E994D9 /* QSyncManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QSyncManager.m; sourceTree = "<group>"; };
+		1CA265B11BC0F34B00E994D9 /* QSyncManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSyncManager.h; sourceTree = "<group>"; };
+		1CA265B91BC0F45800E994D9 /* Customer+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Customer+CoreDataProperties.h"; sourceTree = "<group>"; };
+		1CA265BA1BC0F45800E994D9 /* Customer+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Customer+CoreDataProperties.m"; sourceTree = "<group>"; };
+		1CA265BB1BC0F45800E994D9 /* QCustomer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCustomer.h; sourceTree = "<group>"; };
+		1CA265BC1BC0F45800E994D9 /* QCustomer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QCustomer.m; sourceTree = "<group>"; };
+		1CA265C21BC18C1D00E994D9 /* UICoreDataVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICoreDataVC.h; sourceTree = "<group>"; };
+		1CA265C31BC18C1D00E994D9 /* UICoreDataVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICoreDataVC.m; sourceTree = "<group>"; };
 		1CA75F931B1C8F5C00ACDCB7 /* NSThreadVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSThreadVC.h; sourceTree = "<group>"; };
 		1CA75F941B1C8F5C00ACDCB7 /* NSThreadVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSThreadVC.m; sourceTree = "<group>"; };
 		1CA75F961B1C8F9000ACDCB7 /* NSThreadView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NSThreadView.xib; sourceTree = "<group>"; };
@@ -213,6 +225,7 @@
 		1C153F881B039D5200187EB7 /* iOSWorkshop */ = {
 			isa = PBXGroup;
 			children = (
+				1CA265AF1BC0F31E00E994D9 /* CoreData */,
 				1CE1ECA51BBA32F60045D214 /* Camera */,
 				1C267E091B96031F00005630 /* iPad */,
 				1C0DE7EB1B6292B2002431C6 /* Algoritms */,
@@ -352,6 +365,21 @@
 				1C0B965E1B0677A300E43B62 /* RegionMonitor.m */,
 			);
 			name = Services;
+			sourceTree = "<group>";
+		};
+		1CA265AF1BC0F31E00E994D9 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				1CA265B11BC0F34B00E994D9 /* QSyncManager.h */,
+				1CA265B01BC0F34B00E994D9 /* QSyncManager.m */,
+				1CA265B91BC0F45800E994D9 /* Customer+CoreDataProperties.h */,
+				1CA265BA1BC0F45800E994D9 /* Customer+CoreDataProperties.m */,
+				1CA265BB1BC0F45800E994D9 /* QCustomer.h */,
+				1CA265BC1BC0F45800E994D9 /* QCustomer.m */,
+				1CA265C21BC18C1D00E994D9 /* UICoreDataVC.h */,
+				1CA265C31BC18C1D00E994D9 /* UICoreDataVC.m */,
+			);
+			name = CoreData;
 			sourceTree = "<group>";
 		};
 		1CE1ECA51BBA32F60045D214 /* Camera */ = {
@@ -531,6 +559,7 @@
 				1C325ADA1B5453DD00AE613F /* NSCustomer.m in Sources */,
 				1CA75F951B1C8F5C00ACDCB7 /* NSThreadVC.m in Sources */,
 				1C153F8F1B039D5200187EB7 /* AppDelegate.m in Sources */,
+				1CA265C41BC18C1D00E994D9 /* UICoreDataVC.m in Sources */,
 				1C153F921B039D5200187EB7 /* iOSWorkshop.xcdatamodeld in Sources */,
 				1C0AE0091BA223F0001658FE /* WebViewContainer.m in Sources */,
 				1C0DE7EA1B6292A9002431C6 /* UIAlgorithmsVC.m in Sources */,
@@ -538,13 +567,16 @@
 				1C168F271B1BED4D003957BD /* GrandCentralDispatchVC.m in Sources */,
 				1C2E5CB91B9DB21600188BED /* SimplePing.m in Sources */,
 				1CC9CCA21B041EF6001EB21A /* UIWebViewController.m in Sources */,
+				1CA265BE1BC0F45800E994D9 /* QCustomer.m in Sources */,
 				1C325AD01B5405E400AE613F /* UIMemoryManagementVC.m in Sources */,
 				1C325AD71B541B5800AE613F /* NSEntity.m in Sources */,
 				1C153F951B039D5200187EB7 /* RootViewController.m in Sources */,
+				1CA265BD1BC0F45800E994D9 /* Customer+CoreDataProperties.m in Sources */,
 				1CECEF1F1B2FAFCC00A1CA73 /* CameraVC.m in Sources */,
 				1CC320BD1B710AC6008B567B /* UITableVC.m in Sources */,
 				1CC320C01B72818C008B567B /* NSOperationVC.m in Sources */,
 				1C0B965F1B0677A300E43B62 /* RegionMonitor.m in Sources */,
+				1CA265B21BC0F34B00E994D9 /* QSyncManager.m in Sources */,
 				1C49920C1B2CE9F60011048B /* NetworkingVC.m in Sources */,
 				1C0DE7EE1B629708002431C6 /* UIAlgorithmsDetailVC.m in Sources */,
 				1C0A10BC1B69249F0087F017 /* UIBarCodeReaderVC.m in Sources */,
