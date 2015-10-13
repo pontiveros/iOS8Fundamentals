@@ -52,6 +52,7 @@
     [fundamentals setObject:@"openFilesAndNetworking" forKey:@"Files and Networking"];
     [fundamentals setObject:@"openWorkingViews" forKey:@"Working with views"];
     [fundamentals setObject:@"openAlgorithms" forKey:@"Working with algoritms"];
+    [fundamentals setObject:@"openStoryboard2" forKey:@"Storyboard"];
     [items setObject:fundamentals forKey:@"Fundamentals"];
     
     NSMutableDictionary *advanced = [[NSMutableDictionary alloc] init];
@@ -83,6 +84,12 @@
     [self.navigationController pushViewController:vc animated:YES];
 }
 
+- (void)openStoryboard2
+{
+    UIStoryboard *storyBoard2 = [UIStoryboard storyboardWithName:@"Storyboard2" bundle:nil];
+    UIViewController *vc= [storyBoard2 instantiateInitialViewController];
+    [self.navigationController pushViewController:vc animated:YES];
+}
 
 - (void)openWebViewVC
 {

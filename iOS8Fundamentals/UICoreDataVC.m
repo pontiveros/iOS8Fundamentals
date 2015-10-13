@@ -49,6 +49,15 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(refreshList)
+                                                 name:@"NSManagedObjectContextDidSaveNotification"
+                                                object:nil];
+}
+
+- (void)refreshList
+{
+    NSLog(@"wowowowowow *************************");
 }
 
 - (void)syncMoc

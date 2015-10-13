@@ -18,7 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"Algorithms";
-    self.items = @{@"Sort NSString":@"openSortString", @"Binary Search":@"openBinarySearch"};
+    self.items = @{@"Sort NSString":@"openSortString", @"Binary Search":@"openBinarySearch", @"Functional Example":@"openFunctionalSample"};
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -30,6 +30,11 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)openFunctionalSample
+{
+    NSLog(@"Here we're");
 }
 
 #pragma mark - Table view data source

@@ -38,6 +38,10 @@
 		1C325ADA1B5453DD00AE613F /* NSCustomer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C325AD91B5453DD00AE613F /* NSCustomer.m */; };
 		1C3678D71B9CEE1200878DFF /* UIPingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C3678D61B9CEE1200878DFF /* UIPingVC.m */; };
 		1C3678DA1B9CF00300878DFF /* UIPingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C3678D91B9CF00300878DFF /* UIPingView.xib */; };
+		1C3D573C1BC9C12300BF2C62 /* Storyboard2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C3D573B1BC9C12300BF2C62 /* Storyboard2.storyboard */; settings = {ASSET_TAGS = (); }; };
+		1C3D57401BC9D47D00BF2C62 /* UIRootNewScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C3D573F1BC9D47D00BF2C62 /* UIRootNewScene.m */; settings = {ASSET_TAGS = (); }; };
+		1C3D57431BCAE75900BF2C62 /* UISceneTwoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C3D57421BCAE75900BF2C62 /* UISceneTwoVC.m */; settings = {ASSET_TAGS = (); }; };
+		1C3D57451BCB6C9500BF2C62 /* MainTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C3D57441BCB6C9500BF2C62 /* MainTest.m */; settings = {ASSET_TAGS = (); }; };
 		1C49920C1B2CE9F60011048B /* NetworkingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C49920B1B2CE9F60011048B /* NetworkingVC.m */; };
 		1C5653B81B03C99900BBE07D /* IBeaconView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C5653B71B03C99900BBE07D /* IBeaconView.xib */; };
 		1C5653BB1B03C9D600BBE07D /* IBeaconViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C5653BA1B03C9D600BBE07D /* IBeaconViewController.m */; };
@@ -123,6 +127,12 @@
 		1C3678D61B9CEE1200878DFF /* UIPingVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIPingVC.m; sourceTree = "<group>"; };
 		1C3678D81B9CEE2600878DFF /* UIPingVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIPingVC.h; sourceTree = "<group>"; };
 		1C3678D91B9CF00300878DFF /* UIPingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UIPingView.xib; sourceTree = "<group>"; };
+		1C3D573B1BC9C12300BF2C62 /* Storyboard2.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Storyboard2.storyboard; path = iOS8Fundamentals/Storyboard2.storyboard; sourceTree = "<group>"; };
+		1C3D573E1BC9D47D00BF2C62 /* UIRootNewScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UIRootNewScene.h; path = iOS8Fundamentals/UIRootNewScene.h; sourceTree = "<group>"; };
+		1C3D573F1BC9D47D00BF2C62 /* UIRootNewScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UIRootNewScene.m; path = iOS8Fundamentals/UIRootNewScene.m; sourceTree = "<group>"; };
+		1C3D57411BCAE75900BF2C62 /* UISceneTwoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UISceneTwoVC.h; path = iOS8Fundamentals/UISceneTwoVC.h; sourceTree = "<group>"; };
+		1C3D57421BCAE75900BF2C62 /* UISceneTwoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UISceneTwoVC.m; path = iOS8Fundamentals/UISceneTwoVC.m; sourceTree = "<group>"; };
+		1C3D57441BCB6C9500BF2C62 /* MainTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainTest.m; path = ../iOS8Fundamentals/MainTest.m; sourceTree = "<group>"; };
 		1C49920A1B2CE9F60011048B /* NetworkingVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkingVC.h; sourceTree = "<group>"; };
 		1C49920B1B2CE9F60011048B /* NetworkingVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkingVC.m; sourceTree = "<group>"; };
 		1C49920D1B2CEA1C0011048B /* NetworkingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NetworkingView.xib; sourceTree = "<group>"; };
@@ -234,6 +244,7 @@
 				1C8D2D2B1B308DFC0094ED97 /* Services */,
 				1C4992091B2CE9A00011048B /* Networking */,
 				1C168F241B1BED20003957BD /* ThreadPrograming */,
+				1C3D573D1BC9D41400BF2C62 /* Storyboard2 */,
 				1C0A10BA1B69249F0087F017 /* UIBarCodeReaderVC.h */,
 				1C0A10BB1B69249F0087F017 /* UIBarCodeReaderVC.m */,
 				1C0A10BD1B6924D70087F017 /* UIBarCodeReaderView.xib */,
@@ -273,6 +284,7 @@
 		1C153FA51B039D5200187EB7 /* iOSWorkshopTests */ = {
 			isa = PBXGroup;
 			children = (
+				1C3D57441BCB6C9500BF2C62 /* MainTest.m */,
 				1C153FA81B039D5200187EB7 /* iOSWorkshopTests.m */,
 				1C153FA61B039D5200187EB7 /* Supporting Files */,
 			);
@@ -323,6 +335,19 @@
 				1C325AD91B5453DD00AE613F /* NSCustomer.m */,
 			);
 			name = DummyClasses;
+			sourceTree = "<group>";
+		};
+		1C3D573D1BC9D41400BF2C62 /* Storyboard2 */ = {
+			isa = PBXGroup;
+			children = (
+				1C3D573B1BC9C12300BF2C62 /* Storyboard2.storyboard */,
+				1C3D573E1BC9D47D00BF2C62 /* UIRootNewScene.h */,
+				1C3D573F1BC9D47D00BF2C62 /* UIRootNewScene.m */,
+				1C3D57411BCAE75900BF2C62 /* UISceneTwoVC.h */,
+				1C3D57421BCAE75900BF2C62 /* UISceneTwoVC.m */,
+			);
+			name = Storyboard2;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		1C4992091B2CE9A00011048B /* Networking */ = {
@@ -490,6 +515,7 @@
 			files = (
 				1C5653B81B03C99900BBE07D /* IBeaconView.xib in Resources */,
 				1C0AE00B1BA2241B001658FE /* WebViewContainer.xib in Resources */,
+				1C3D573C1BC9C12300BF2C62 /* Storyboard2.storyboard in Resources */,
 				1CA75F971B1C8F9000ACDCB7 /* NSThreadView.xib in Resources */,
 				1C122C711BB5801D003AB3C3 /* ScriptWebView.js in Resources */,
 				1C168F291B1BED91003957BD /* GrandCentralDispatchView.xib in Resources */,
@@ -572,6 +598,7 @@
 				1C325AD71B541B5800AE613F /* NSEntity.m in Sources */,
 				1C153F951B039D5200187EB7 /* RootViewController.m in Sources */,
 				1CA265BD1BC0F45800E994D9 /* Customer+CoreDataProperties.m in Sources */,
+				1C3D57431BCAE75900BF2C62 /* UISceneTwoVC.m in Sources */,
 				1CECEF1F1B2FAFCC00A1CA73 /* CameraVC.m in Sources */,
 				1CC320BD1B710AC6008B567B /* UITableVC.m in Sources */,
 				1CC320C01B72818C008B567B /* NSOperationVC.m in Sources */,
@@ -581,6 +608,7 @@
 				1C0DE7EE1B629708002431C6 /* UIAlgorithmsDetailVC.m in Sources */,
 				1C0A10BC1B69249F0087F017 /* UIBarCodeReaderVC.m in Sources */,
 				1C3678D71B9CEE1200878DFF /* UIPingVC.m in Sources */,
+				1C3D57401BC9D47D00BF2C62 /* UIRootNewScene.m in Sources */,
 				1C168F211B1A5080003957BD /* MultiThreadVC.m in Sources */,
 				1C153F8C1B039D5200187EB7 /* main.m in Sources */,
 				1CD8286C1BA8C10E00A71567 /* PickerImageHelper.m in Sources */,
@@ -591,6 +619,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C3D57451BCB6C9500BF2C62 /* MainTest.m in Sources */,
 				1C153FA91B039D5200187EB7 /* iOSWorkshopTests.m in Sources */,
 				1CECEF201B2FAFCC00A1CA73 /* CameraVC.m in Sources */,
 			);
