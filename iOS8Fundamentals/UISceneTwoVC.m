@@ -18,7 +18,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.title = @"Scene Two";
-    [self.view setBackgroundColor:[UIColor blueColor]];
+    [self.view setBackgroundColor:[UIColor colorWithRed:250.0/255.0 green:230.0/255.0 blue:220.0/255.0 alpha:1.0]];
 }
 
 - (void)didReceiveMemoryWarning {
