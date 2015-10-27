@@ -19,6 +19,12 @@
     // Do any additional setup after loading the view.
     self.title = @"Scene Two";
     [self.view setBackgroundColor:[UIColor colorWithRed:250.0/255.0 green:230.0/255.0 blue:220.0/255.0 alpha:1.0]];
+    [self.redView setBackgroundColor:[UIColor blueColor]];
+    
+    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(onTapGesture:)];
+    [self.redView addGestureRecognizer:tapGesture];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -35,5 +41,16 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (void)onTapGesture:(UITapGestureRecognizer*)sender
+{
+    NSLog(@"Hey, it's works!");
+    
+    if (self.redView.backgroundColor == [UIColor blueColor]) {
+        [self.redView setBackgroundColor:[UIColor redColor]];
+    } else {
+        [self.redView setBackgroundColor:[UIColor blueColor]];
+    }
+}
 
 @end

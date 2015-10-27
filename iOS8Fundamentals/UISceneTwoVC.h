@@ -10,4 +10,6 @@
 
 @interface UISceneTwoVC : UIViewController
 
+@property(nonatomic, assign) IBOutlet UIView *redView;
+
 @end

@@ -20,7 +20,22 @@
     // Do any additional setup after loading the view.
     self.navigationController.navigationBar.translucent = NO;
     [self.navigationController.navigationBar setBackgroundColor:[UIColor blueColor]];
-    [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://localhost/getcustomer/TheCLanguage.pdf"]]];
+
+//    [self.webView.scrollView setAlwaysBounceVertical:YES];
+//    [self.webView.scrollView setAutoresizesSubviews:YES];
+//    [self.webView.scrollView setScrollEnabled:NO];
+//    [self.webView.scrollView setPagingEnabled:YES];
+//    [self.webView.scrollView setContentOffset:CGPointMake(1, 1000.0) animated:NO];
+//    [self.webView.scrollView setContentCompressionResistancePriority:UILayoutPriorityDefaultHigh forAxis:UILayoutConstraintAxisVertical];
+//    [self.webView setAccessibilityNavigationStyle:UIAccessibilityNavigationStyleSeparate];
+    
+//    self.webView.suppressesIncrementalRendering = YES;
+//    self.webView.gapBetweenPages = 20.0;
+    self.webView.scalesPageToFit = YES;
+
+    [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://localhost/getpdf/out/theclanguage.html"]]];
+//    [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"https://l3-documents.appspot.com/brands/GPRO/prospectus/prospectus.html"]]];
+//    [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://localhost/getcustomer/TheCLanguage.pdf"]]];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -57,12 +72,21 @@
 - (void)webViewDidFinishLoad:(UIWebView *)webView
 {
     [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+//    [NSTimer scheduledTimerWithTimeInterval:5 target:self selector:@selector(updateCanvas) userInfo:nil repeats:NO];
 }
 
 - (void)runInBackground
 {
     NSString *script = @"showAlert();";
     [self.webView stringByEvaluatingJavaScriptFromString:script];
+}
+
+- (void)updateCanvas
+{
+    [self.webView stringByEvaluatingJavaScriptFromString:@"console.log('before upadted');"];
+    NSString *script = @"document.querySelector('body').style.webkitOverflowScrolling = 'touch';";
+    [self.webView stringByEvaluatingJavaScriptFromString:script];
+    [self.webView stringByEvaluatingJavaScriptFromString:@"console.log('after upadted');"];
 }
 
 @end

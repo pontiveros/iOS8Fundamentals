@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="7u3-1C-wD0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="7u3-1C-wD0">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
@@ -63,21 +63,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cZt-ji-2wG">
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fol-ly-xu5">
+                                <rect key="frame" x="225" y="180" width="150" height="240"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cZt-ji-2wG">
                                 <rect key="frame" x="207" y="550" width="187" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="187" id="xXo-1d-8Qf"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <segue destination="oTr-os-Sl6" kind="show" id="bbs-Ii-Fig"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fol-ly-xu5">
-                                <rect key="frame" x="180" y="180" width="240" height="240"/>
-                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cZt-ji-2wG" firstAttribute="centerX" secondItem="AJa-8v-uY0" secondAttribute="centerX" id="ApL-be-0Te"/>
+                            <constraint firstItem="Fol-ly-xu5" firstAttribute="centerY" secondItem="AJa-8v-uY0" secondAttribute="centerY" id="C8D-IJ-EZt"/>
+                            <constraint firstItem="cZt-ji-2wG" firstAttribute="centerX" secondItem="Fol-ly-xu5" secondAttribute="centerX" id="K1V-2K-Nzk"/>
+                            <constraint firstItem="Fol-ly-xu5" firstAttribute="top" secondItem="iz8-6P-Ue9" secondAttribute="bottom" constant="116" id="jVD-Kb-k2Q"/>
+                            <constraint firstAttribute="bottom" secondItem="cZt-ji-2wG" secondAttribute="bottom" constant="20" symbolic="YES" id="lOS-lB-x0e"/>
+                        </constraints>
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="redView" destination="Fol-ly-xu5" id="IKC-xO-wQW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="twj-vM-HZR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -95,8 +108,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0DI-uo-nEl">
-                                <rect key="frame" x="277" y="275" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0DI-uo-nEl">
+                                <rect key="frame" x="278" y="275" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
                             </button>
                         </subviews>
