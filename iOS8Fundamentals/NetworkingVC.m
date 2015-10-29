@@ -10,7 +10,9 @@
 #import "UIPingVC.h"
 #import "WebViewContainer.h"
 #import "PickerImageHelper.h"
+#import <MultipeerConnectivity/MultipeerConnectivity.h>
 
+static NSString * const XXServiceType = @"xx-service";
 
 @interface NetworkingVC ()
 
@@ -43,6 +45,18 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (IBAction)onTouchPeerConnection:(id)sender
+{
+    NSLog(@"Message from peer connection.");
+    MCPeerID *localPeerID = [[MCPeerID alloc] initWithDisplayName:[[UIDevice currentDevice] name]];
+    MCSession *session = [[MCSession alloc] initWithPeer:localPeerID];
+    
+    MCAdvertiserAssistant *adAssitant = [[MCAdvertiserAssistant alloc] initWithServiceType:XXServiceType discoveryInfo:nil session:session];
+    
+    adAssitant.delegate = self;
+    [adAssitant start];
+}
 
 - (IBAction)onTouchPing:(id)sender
 {
@@ -216,4 +230,11 @@
                                                   }];
     [uploadTask resume];
 }
+
+#pragma mark - MCAdvertiserAssistantDelegate
+- (void)advertiser:(MCNearbyServiceAdvertiser *)advertiser didReceiveInvitationFromPeer:(MCPeerID *)peerID withContext:(NSData *)context invitationHandler:(void (^)(BOOL accept, MCSession *session))invitationHandler
+{
+    NSLog(@"log ppppppp ********** PPPPPP");
+}
+
 @end

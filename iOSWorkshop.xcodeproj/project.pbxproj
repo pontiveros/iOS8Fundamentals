@@ -43,6 +43,7 @@
 		1C3D57431BCAE75900BF2C62 /* UISceneTwoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C3D57421BCAE75900BF2C62 /* UISceneTwoVC.m */; settings = {ASSET_TAGS = (); }; };
 		1C3D57451BCB6C9500BF2C62 /* MainTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C3D57441BCB6C9500BF2C62 /* MainTest.m */; settings = {ASSET_TAGS = (); }; };
 		1C49920C1B2CE9F60011048B /* NetworkingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C49920B1B2CE9F60011048B /* NetworkingVC.m */; };
+		1C5289851BDFCD1E008F5DBC /* MultipeerConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C5289841BDFCD1E008F5DBC /* MultipeerConnectivity.framework */; };
 		1C5653B81B03C99900BBE07D /* IBeaconView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C5653B71B03C99900BBE07D /* IBeaconView.xib */; };
 		1C5653BB1B03C9D600BBE07D /* IBeaconViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C5653BA1B03C9D600BBE07D /* IBeaconViewController.m */; };
 		1C5653BD1B03CCD400BBE07D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C5653BC1B03CCD400BBE07D /* CoreLocation.framework */; };
@@ -136,6 +137,7 @@
 		1C49920A1B2CE9F60011048B /* NetworkingVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkingVC.h; sourceTree = "<group>"; };
 		1C49920B1B2CE9F60011048B /* NetworkingVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkingVC.m; sourceTree = "<group>"; };
 		1C49920D1B2CEA1C0011048B /* NetworkingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NetworkingView.xib; sourceTree = "<group>"; };
+		1C5289841BDFCD1E008F5DBC /* MultipeerConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MultipeerConnectivity.framework; path = System/Library/Frameworks/MultipeerConnectivity.framework; sourceTree = SDKROOT; };
 		1C5653B71B03C99900BBE07D /* IBeaconView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IBeaconView.xib; sourceTree = "<group>"; };
 		1C5653B91B03C9D600BBE07D /* IBeaconViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBeaconViewController.h; sourceTree = "<group>"; };
 		1C5653BA1B03C9D600BBE07D /* IBeaconViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBeaconViewController.m; sourceTree = "<group>"; };
@@ -173,6 +175,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C5289851BDFCD1E008F5DBC /* MultipeerConnectivity.framework in Frameworks */,
 				1C0AE00D1BA22589001658FE /* WebKit.framework in Frameworks */,
 				1C0A10C01B6926C30087F017 /* AVFoundation.framework in Frameworks */,
 				1C5653C01B04B6EB00BBE07D /* CoreBluetooth.framework in Frameworks */,
@@ -374,6 +377,7 @@
 		1C5653BE1B03CCDB00BBE07D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1C5289841BDFCD1E008F5DBC /* MultipeerConnectivity.framework */,
 				1C0AE00C1BA22589001658FE /* WebKit.framework */,
 				1C0A10BF1B6926C30087F017 /* AVFoundation.framework */,
 				1C5653BF1B04B6EB00BBE07D /* CoreBluetooth.framework */,
