@@ -7,10 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <MultipeerConnectivity/MultipeerConnectivity.h>
 #import "PickerImageHelper.h"
 
-@interface NetworkingVC : UIViewController<NSURLSessionDelegate, MCAdvertiserAssistantDelegate>
+@interface NetworkingVC : UIViewController<NSURLSessionDelegate>
 
 @property (nonatomic, retain)PickerImageHelper *imageHelper;
 @property (nonatomic, retain)NSString *stringURL;

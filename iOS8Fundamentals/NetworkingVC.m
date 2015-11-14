@@ -10,9 +10,8 @@
 #import "UIPingVC.h"
 #import "WebViewContainer.h"
 #import "PickerImageHelper.h"
+#import "UIPeerToPeerVC.h"
 #import <MultipeerConnectivity/MultipeerConnectivity.h>
-
-static NSString * const XXServiceType = @"xx-service";
 
 @interface NetworkingVC ()
 
@@ -48,14 +47,8 @@ static NSString * const XXServiceType = @"xx-service";
 
 - (IBAction)onTouchPeerConnection:(id)sender
 {
-    NSLog(@"Message from peer connection.");
-    MCPeerID *localPeerID = [[MCPeerID alloc] initWithDisplayName:[[UIDevice currentDevice] name]];
-    MCSession *session = [[MCSession alloc] initWithPeer:localPeerID];
-    
-    MCAdvertiserAssistant *adAssitant = [[MCAdvertiserAssistant alloc] initWithServiceType:XXServiceType discoveryInfo:nil session:session];
-    
-    adAssitant.delegate = self;
-    [adAssitant start];
+    UIPeerToPeerVC *vc = [[UIPeerToPeerVC alloc] initWithNibName:@"UIPeerToPeerView" bundle:nil];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (IBAction)onTouchPing:(id)sender

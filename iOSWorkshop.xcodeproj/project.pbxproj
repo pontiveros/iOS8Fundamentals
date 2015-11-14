@@ -53,6 +53,8 @@
 		1CA265BD1BC0F45800E994D9 /* Customer+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA265BA1BC0F45800E994D9 /* Customer+CoreDataProperties.m */; settings = {ASSET_TAGS = (); }; };
 		1CA265BE1BC0F45800E994D9 /* QCustomer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA265BC1BC0F45800E994D9 /* QCustomer.m */; settings = {ASSET_TAGS = (); }; };
 		1CA265C41BC18C1D00E994D9 /* UICoreDataVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA265C31BC18C1D00E994D9 /* UICoreDataVC.m */; settings = {ASSET_TAGS = (); }; };
+		1CA6C6121BE1BC08004A0C8B /* UIPeerToPeerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA6C6111BE1BC08004A0C8B /* UIPeerToPeerVC.m */; settings = {ASSET_TAGS = (); }; };
+		1CA6C6141BE1BC3F004A0C8B /* UIPeerToPeerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1CA6C6131BE1BC3F004A0C8B /* UIPeerToPeerView.xib */; settings = {ASSET_TAGS = (); }; };
 		1CA75F951B1C8F5C00ACDCB7 /* NSThreadVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA75F941B1C8F5C00ACDCB7 /* NSThreadVC.m */; };
 		1CA75F971B1C8F9000ACDCB7 /* NSThreadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1CA75F961B1C8F9000ACDCB7 /* NSThreadView.xib */; };
 		1CC320BD1B710AC6008B567B /* UITableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CC320BC1B710AC6008B567B /* UITableVC.m */; };
@@ -151,6 +153,9 @@
 		1CA265BC1BC0F45800E994D9 /* QCustomer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QCustomer.m; sourceTree = "<group>"; };
 		1CA265C21BC18C1D00E994D9 /* UICoreDataVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICoreDataVC.h; sourceTree = "<group>"; };
 		1CA265C31BC18C1D00E994D9 /* UICoreDataVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICoreDataVC.m; sourceTree = "<group>"; };
+		1CA6C6101BE1BC08004A0C8B /* UIPeerToPeerVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIPeerToPeerVC.h; sourceTree = "<group>"; };
+		1CA6C6111BE1BC08004A0C8B /* UIPeerToPeerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIPeerToPeerVC.m; sourceTree = "<group>"; };
+		1CA6C6131BE1BC3F004A0C8B /* UIPeerToPeerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UIPeerToPeerView.xib; sourceTree = "<group>"; };
 		1CA75F931B1C8F5C00ACDCB7 /* NSThreadVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSThreadVC.h; sourceTree = "<group>"; };
 		1CA75F941B1C8F5C00ACDCB7 /* NSThreadVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSThreadVC.m; sourceTree = "<group>"; };
 		1CA75F961B1C8F9000ACDCB7 /* NSThreadView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NSThreadView.xib; sourceTree = "<group>"; };
@@ -370,6 +375,9 @@
 				1CD8286A1BA8C10E00A71567 /* PickerImageHelper.m */,
 				1CD8286B1BA8C10E00A71567 /* PickerImageHelper.h */,
 				1C122C701BB5801D003AB3C3 /* ScriptWebView.js */,
+				1CA6C6101BE1BC08004A0C8B /* UIPeerToPeerVC.h */,
+				1CA6C6111BE1BC08004A0C8B /* UIPeerToPeerVC.m */,
+				1CA6C6131BE1BC3F004A0C8B /* UIPeerToPeerView.xib */,
 			);
 			name = Networking;
 			sourceTree = "<group>";
@@ -525,6 +533,7 @@
 				1C168F291B1BED91003957BD /* GrandCentralDispatchView.xib in Resources */,
 				1CECEF221B2FB06800A1CA73 /* CameraView.xib in Resources */,
 				1C0DE7E61B627CA3002431C6 /* motorcycle.png in Resources */,
+				1CA6C6141BE1BC3F004A0C8B /* UIPeerToPeerView.xib in Resources */,
 				1C88C7E01BAC69E10083007A /* NetworkingView.xib in Resources */,
 				1C168F231B1A50A7003957BD /* MultiThreadView.xib in Resources */,
 				1C153F981B039D5200187EB7 /* Main.storyboard in Resources */,
@@ -595,6 +604,7 @@
 				1C0DE7EA1B6292A9002431C6 /* UIAlgorithmsVC.m in Sources */,
 				1C5653BB1B03C9D600BBE07D /* IBeaconViewController.m in Sources */,
 				1C168F271B1BED4D003957BD /* GrandCentralDispatchVC.m in Sources */,
+				1CA6C6121BE1BC08004A0C8B /* UIPeerToPeerVC.m in Sources */,
 				1C2E5CB91B9DB21600188BED /* SimplePing.m in Sources */,
 				1CC9CCA21B041EF6001EB21A /* UIWebViewController.m in Sources */,
 				1CA265BE1BC0F45800E994D9 /* QCustomer.m in Sources */,
@@ -758,7 +768,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Testing.iOSWorkshop;
 				PRODUCT_NAME = iOSWorkshop;
-				PROVISIONING_PROFILE = "b4f6517b-9240-4565-af52-367b853a626d";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
