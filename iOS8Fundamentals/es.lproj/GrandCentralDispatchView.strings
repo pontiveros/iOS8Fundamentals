@@ -1,0 +1,15 @@
+
+/* Class = "UIButton"; normalTitle = "Worker 1"; ObjectID = "48Q-3O-vnf"; */
+"48Q-3O-vnf.normalTitle" = "Worker 1";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Q1s-Wc-wpe"; */
+"Q1s-Wc-wpe.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Concurrent Queue 2"; ObjectID = "chV-nH-sxg"; */
+"chV-nH-sxg.normalTitle" = "Concurrent Queue 2";
+
+/* Class = "UILabel"; text = "Use barrier block"; ObjectID = "rR5-Xi-jWI"; */
+"rR5-Xi-jWI.text" = "Use barrier block";
+
+/* Class = "UIButton"; normalTitle = "Serial Queue 1"; ObjectID = "tW3-Wj-0TS"; */
+"tW3-Wj-0TS.normalTitle" = "Serial Queue 1";

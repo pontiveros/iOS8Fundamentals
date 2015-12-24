@@ -1,0 +1,12 @@
+
+/* Class = "UILabel"; text = "Result"; ObjectID = "0CO-uf-cey"; */
+"0CO-uf-cey.text" = "Result";
+
+/* Class = "UIButton"; normalTitle = "Open ZBarScan"; ObjectID = "5tt-6o-e6x"; */
+"5tt-6o-e6x.normalTitle" = "Abrir Scanner";
+
+/* Class = "UIButton"; normalTitle = "Open Reader"; ObjectID = "IJc-QS-UbR"; */
+"IJc-QS-UbR.normalTitle" = "Abrir Lector";
+
+/* Class = "UIButton"; normalTitle = "Lock Screen"; ObjectID = "e1c-aj-lh6"; */
+"e1c-aj-lh6.normalTitle" = "Bloquear Pantalla";

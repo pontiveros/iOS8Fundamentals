@@ -1,0 +1,9 @@
+
+/* Class = "UIButton"; normalTitle = "Run block 01"; ObjectID = "2WU-el-rx8"; */
+"2WU-el-rx8.normalTitle" = "Run block 01";
+
+/* Class = "UIButton"; normalTitle = "Start worker 1"; ObjectID = "Chu-Oh-5qn"; */
+"Chu-Oh-5qn.normalTitle" = "Start worker 1";
+
+/* Class = "UILabel"; text = "Worker 1"; ObjectID = "I6D-sc-n5r"; */
+"I6D-sc-n5r.text" = "Worker 1";
