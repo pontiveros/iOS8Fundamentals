@@ -7,6 +7,7 @@
 //
 
 #import "UIRootNewScene.h"
+#import "VCOptimized.h"
 
 @interface UIRootNewScene ()
 
@@ -52,6 +53,12 @@
     UIAlertAction *action = [UIAlertAction actionWithTitle:@"Accept" style:UIAlertActionStyleDefault handler:nil];
     [alertController addAction:action];
     [self presentViewController:alertController animated:YES completion:nil];
+}
+
+- (IBAction)openVCOptimized:(id)sender {
+    VCOptimized *vc = [[VCOptimized alloc] initWithNibName:@"ViewOptimized" bundle:nil];
+    vc.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+    [self presentViewController:vc animated:YES completion:nil];
 }
 
 - (void)performSegueWithIdentifier:(NSString *)identifier sender:(id)sender
