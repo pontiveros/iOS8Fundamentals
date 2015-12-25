@@ -1,0 +1,21 @@
+
+/* Class = "UIButton"; normalTitle = "Upload by NSURLConnection"; ObjectID = "0De-JT-WaL"; */
+"0De-JT-WaL.normalTitle" = "Upload by NSURLConnection";
+
+/* Class = "UIButton"; normalTitle = "Write File"; ObjectID = "ALu-53-gxw"; */
+"ALu-53-gxw.normalTitle" = "Escribir Archivo";
+
+/* Class = "UIButton"; normalTitle = "Peer Connection"; ObjectID = "NoG-bB-zih"; */
+"NoG-bB-zih.normalTitle" = "Punto de Conexión";
+
+/* Class = "UIButton"; normalTitle = "Upload by NSURLSession"; ObjectID = "QkJ-O4-1Q7"; */
+"QkJ-O4-1Q7.normalTitle" = "Upload by NSURLSession";
+
+/* Class = "UIButton"; normalTitle = "WKWebView"; ObjectID = "bm3-i9-iMW"; */
+"bm3-i9-iMW.normalTitle" = "WKWebView";
+
+/* Class = "UIButton"; normalTitle = "Ping"; ObjectID = "dPz-El-WV5"; */
+"dPz-El-WV5.normalTitle" = "Ping";
+
+/* Class = "UIButton"; normalTitle = "Download"; ObjectID = "jgL-ha-lqd"; */
+"jgL-ha-lqd.normalTitle" = "Descargar";

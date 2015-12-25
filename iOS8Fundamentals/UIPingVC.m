@@ -38,7 +38,7 @@ static NSString * DisplayAddressForAddress(NSData * address)
 
 - (void)viewDidLoad
 {
-    self.title = @"Ping";
+    self.title = NSLocalizedString(@"Ping", @"Ping View Title");
 }
 
 - (IBAction)onTouchPing:(id)sender
@@ -46,7 +46,7 @@ static NSString * DisplayAddressForAddress(NSData * address)
     UIButton *button = (UIButton*)sender;
     if (button.tag == 1) {
         button.tag = 0;
-        [button setTitle:@"Ping" forState:UIControlStateNormal];
+        [button setTitle:NSLocalizedString(@"Ping", nil) forState:UIControlStateNormal];
         [self.sendTimer invalidate];
         [self.remote setEnabled:YES];
         self.sendTimer = nil;
@@ -62,11 +62,11 @@ static NSString * DisplayAddressForAddress(NSData * address)
             self.pinger.delegate = self;
             [self.pinger start];
         } else {
-            UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Error"
-                                                                           message:@"Please check remote address."
+            UIAlertController *alert = [UIAlertController alertControllerWithTitle:NSLocalizedString(@"Error", @"Ping Error Title")
+                                                                           message:NSLocalizedString(@"Please check remote address.", @"Ping Error Message")
                                                                     preferredStyle:UIAlertControllerStyleAlert];
             
-            UIAlertAction *action = [UIAlertAction actionWithTitle:@"Accept"
+            UIAlertAction *action = [UIAlertAction actionWithTitle:NSLocalizedString(@"Accept", "Accept button on ping popup error")
                                                              style:UIAlertActionStyleDefault
                                                            handler:^(UIAlertAction *action) {
                                                                NSLog(@"What I have to do here ?");

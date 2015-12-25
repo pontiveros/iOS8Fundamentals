@@ -1,0 +1,18 @@
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "0DI-uo-nEl"; */
+"0DI-uo-nEl.normalTitle" = "Botón";
+
+/* Class = "UIButton"; normalTitle = "Next"; ObjectID = "2w7-PB-Mxg"; */
+"2w7-PB-Mxg.normalTitle" = "Sig";
+
+/* Class = "UIButton"; normalTitle = "Touch Me!"; ObjectID = "G9y-ye-FYN"; */
+"G9y-ye-FYN.normalTitle" = "Tócame!";
+
+/* Class = "UIViewController"; title = "Second Scene"; ObjectID = "Ned-4k-ZY5"; */
+"Ned-4k-ZY5.title" = "Segunda Escena";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "cZt-ji-2wG"; */
+"cZt-ji-2wG.normalTitle" = "Botón";
+
+/* Class = "UIViewController"; title = "Third Scene"; ObjectID = "oTr-os-Sl6"; */
+"oTr-os-Sl6.title" = "Tercera Escena";

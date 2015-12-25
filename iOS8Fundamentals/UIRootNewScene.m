@@ -37,12 +37,21 @@
 
 - (IBAction)onTouchMe:(id)sender
 {
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Title"
-                                                    message:@"Message"
-                                                   delegate:nil
-                                          cancelButtonTitle:@"Accept"
-                                          otherButtonTitles:nil];
-    [alert show];
+//    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Title"
+//                                                    message:@"Message"
+//                                                   delegate:nil
+//                                          cancelButtonTitle:@"Accept"
+//                                          otherButtonTitles:nil];
+//    [alert show];
+    // In iOS 8 and later Apple® recommends use UIAlertController, because it's the same class for popup and action sheet.
+    // you just have to change the alert controller style.
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Alert Controller"
+                                                                             message:@"Message in alert controller."
+                                                                      preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction *action = [UIAlertAction actionWithTitle:@"Accept" style:UIAlertActionStyleDefault handler:nil];
+    [alertController addAction:action];
+    [self presentViewController:alertController animated:YES completion:nil];
 }
 
 - (void)performSegueWithIdentifier:(NSString *)identifier sender:(id)sender
