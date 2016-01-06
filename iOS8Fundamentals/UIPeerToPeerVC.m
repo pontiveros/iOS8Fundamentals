@@ -7,6 +7,7 @@
 //
 
 #import "UIPeerToPeerVC.h"
+//#include "buril.h"
 
 
 static NSString * const XXServiceType = @"pedro-service";
@@ -33,6 +34,10 @@ static NSString * const XXServiceType = @"pedro-service";
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)onTouchSendMessage:(id)sender {
+    NSLog(@"Message form button");
 }
 
 /*

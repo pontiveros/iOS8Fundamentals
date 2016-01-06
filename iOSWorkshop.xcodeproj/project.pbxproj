@@ -39,6 +39,7 @@
 		1C5653BB1B03C9D600BBE07D /* IBeaconViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C5653BA1B03C9D600BBE07D /* IBeaconViewController.m */; };
 		1C5653BD1B03CCD400BBE07D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C5653BC1B03CCD400BBE07D /* CoreLocation.framework */; };
 		1C5653C01B04B6EB00BBE07D /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C5653BF1B04B6EB00BBE07D /* CoreBluetooth.framework */; };
+		1C7DFF231C3CC78A00C3D70D /* libBuril.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C7DFF221C3CC78A00C3D70D /* libBuril.a */; };
 		1CA265B21BC0F34B00E994D9 /* QSyncManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA265B01BC0F34B00E994D9 /* QSyncManager.m */; };
 		1CA265BD1BC0F45800E994D9 /* Customer+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA265BA1BC0F45800E994D9 /* Customer+CoreDataProperties.m */; };
 		1CA265BE1BC0F45800E994D9 /* QCustomer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CA265BC1BC0F45800E994D9 /* QCustomer.m */; };
@@ -136,6 +137,7 @@
 		1C5653BA1B03C9D600BBE07D /* IBeaconViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBeaconViewController.m; sourceTree = "<group>"; };
 		1C5653BC1B03CCD400BBE07D /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		1C5653BF1B04B6EB00BBE07D /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		1C7DFF221C3CC78A00C3D70D /* libBuril.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libBuril.a; path = "Buril/build/Debug-iphoneos/libBuril.a"; sourceTree = "<group>"; };
 		1CA265B01BC0F34B00E994D9 /* QSyncManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QSyncManager.m; sourceTree = "<group>"; };
 		1CA265B11BC0F34B00E994D9 /* QSyncManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSyncManager.h; sourceTree = "<group>"; };
 		1CA265B91BC0F45800E994D9 /* Customer+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Customer+CoreDataProperties.h"; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 		1CA6C6111BE1BC08004A0C8B /* UIPeerToPeerVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIPeerToPeerVC.m; sourceTree = "<group>"; };
 		1CA75F931B1C8F5C00ACDCB7 /* NSThreadVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSThreadVC.h; sourceTree = "<group>"; };
 		1CA75F941B1C8F5C00ACDCB7 /* NSThreadVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSThreadVC.m; sourceTree = "<group>"; };
+		1CA772961C3BDD070072A2DE /* libburil.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libburil.a; path = "buril/build/Debug-iphoneos/libburil.a"; sourceTree = "<group>"; };
 		1CB0A6321C10910900370872 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/UIAlgorithmsDetailView.xib; sourceTree = "<group>"; };
 		1CB0A6351C10911500370872 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/NetworkingView.xib; sourceTree = "<group>"; };
 		1CB0A6381C10911C00370872 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/UIPingView.xib; sourceTree = "<group>"; };
@@ -198,6 +201,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C7DFF231C3CC78A00C3D70D /* libBuril.a in Frameworks */,
 				1C5289851BDFCD1E008F5DBC /* MultipeerConnectivity.framework in Frameworks */,
 				1C0AE00D1BA22589001658FE /* WebKit.framework in Frameworks */,
 				1C0A10C01B6926C30087F017 /* AVFoundation.framework in Frameworks */,
@@ -404,6 +408,8 @@
 		1C5653BE1B03CCDB00BBE07D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1C7DFF221C3CC78A00C3D70D /* libBuril.a */,
+				1CA772961C3BDD070072A2DE /* libburil.a */,
 				1C5289841BDFCD1E008F5DBC /* MultipeerConnectivity.framework */,
 				1C0AE00C1BA22589001658FE /* WebKit.framework */,
 				1C0A10BF1B6926C30087F017 /* AVFoundation.framework */,
@@ -932,6 +938,11 @@
 				INFOPLIST_FILE = iOS8Fundamentals/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/buril/build/Debug-iphoneos",
+					"$(PROJECT_DIR)/Buril/build/Debug-iphoneos",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Testing.iOSWorkshop;
 				PRODUCT_NAME = iOSWorkshop;
 				PROVISIONING_PROFILE = "";
@@ -948,6 +959,11 @@
 				INFOPLIST_FILE = iOS8Fundamentals/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/buril/build/Debug-iphoneos",
+					"$(PROJECT_DIR)/Buril/build/Debug-iphoneos",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Testing.iOSWorkshop;
 				PRODUCT_NAME = iOSWorkshop;
 				PROVISIONING_PROFILE = "b4f6517b-9240-4565-af52-367b853a626d";

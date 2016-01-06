@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:Buril/Buril.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:iOSWorkshop.xcodeproj">
    </FileRef>
    <FileRef
